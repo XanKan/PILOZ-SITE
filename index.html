@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Piloz — Le copilote commercial des indépendants et TPE</title>
+<meta name="description" content="Prospection, relances automatiques, devis et factures : Piloz pilote votre activité commerciale de bout en bout. Essai gratuit 14 jours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800;900&family=Spline+Sans+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--flamme:#A450FB;--flamme2:#8332E8;--encre:#1D1233;--encre2:#2A1B4A;--fond:#F7F5FC;--carte:#fff;--gris:#6B6580;--trait:#E9E4F5;--sapin:#1E7A46;--r:18px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Albert Sans',sans-serif;color:var(--encre);background:var(--fond)}
+.mono{font-family:'Spline Sans Mono',monospace}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+/* nav */
+nav{position:sticky;top:0;background:rgba(247,245,252,.92);backdrop-filter:blur(8px);z-index:10;border-bottom:1px solid var(--trait)}
+.nav{display:flex;align-items:center;gap:26px;padding:14px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.2rem;letter-spacing:-.02em}
+.pastille{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--flamme),#5B21A8);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.15rem;font-weight:800}
+.nav a{text-decoration:none;font-weight:600;font-size:.92rem;color:var(--gris)}
+.nav a:hover{color:var(--encre)}
+.nav .cta{margin-left:auto;background:var(--flamme);color:#fff;padding:10px 20px;border-radius:11px;font-weight:800}
+.nav .cta:hover{background:var(--flamme2);color:#fff}
+/* hero */
+.hero{padding:78px 0 60px;text-align:center;background:radial-gradient(ellipse 900px 480px at 50% -80px,#EFE4FF 0%,var(--fond) 62%)}
+.hero .badge{display:inline-block;background:#EFE4FF;color:var(--flamme2);font-weight:800;font-size:.8rem;padding:7px 16px;border-radius:99px;margin-bottom:18px;letter-spacing:.03em}
+h1{font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.1;letter-spacing:-.03em;font-weight:900;max-width:820px;margin:0 auto 18px}
+h1 b{color:var(--flamme)}
+.hero p{font-size:1.14rem;color:var(--gris);max-width:640px;margin:0 auto 30px;line-height:1.6}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:800;padding:15px 30px;border-radius:13px;font-size:1rem}
+.btn-p{background:var(--flamme);color:#fff;box-shadow:0 10px 26px rgba(164,80,251,.35)}
+.btn-p:hover{background:var(--flamme2)}
+.btn-o{background:#fff;border:2px solid var(--trait);color:var(--encre)}
+.hero small{display:block;margin-top:14px;color:var(--gris);font-size:.85rem}
+/* bandeau app */
+.appshot{margin:52px auto 0;max-width:880px;background:var(--encre);border-radius:22px;padding:20px;box-shadow:0 34px 80px rgba(29,18,51,.3);text-align:left;color:#fff}
+.appshot .barre{display:flex;gap:7px;margin-bottom:14px}
+.appshot .barre i{width:11px;height:11px;border-radius:50%;background:#4A3A6E;display:block}
+.fauxkpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.fauxkpi div{background:var(--encre2);border-radius:13px;padding:15px}
+.fauxkpi label{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:#B9A8E0;font-weight:700}
+.fauxkpi b{display:block;font-size:1.5rem;margin-top:5px;font-family:'Spline Sans Mono'}
+.v1{color:#C89BFF}.v2{color:#7FE0A7}.v3{color:#FFC97F}
+/* sections */
+section{padding:74px 0}
+.sect-t{text-align:center;margin-bottom:44px}
+.sect-t h2{font-size:clamp(1.5rem,3.4vw,2.2rem);letter-spacing:-.02em;font-weight:900}
+.sect-t p{color:var(--gris);margin-top:10px;font-size:1.02rem}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.feat{background:var(--carte);border:1px solid var(--trait);border-radius:var(--r);padding:26px}
+.feat .ico{font-size:1.7rem}
+.feat h3{margin:12px 0 8px;font-size:1.08rem}
+.feat p{color:var(--gris);font-size:.92rem;line-height:1.6}
+/* étapes */
+.etapes{counter-reset:e}
+.etape{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--trait);border-radius:var(--r);padding:22px;margin-bottom:14px}
+.etape::before{counter-increment:e;content:counter(e);flex-shrink:0;width:40px;height:40px;border-radius:50%;background:var(--flamme);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.etape h3{margin-bottom:4px}
+.etape p{color:var(--gris);font-size:.92rem}
+/* pricing */
+.prix{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;align-items:stretch}
+.plan{background:#fff;border:2px solid var(--trait);border-radius:var(--r);padding:30px;display:flex;flex-direction:column}
+.plan.star{border-color:var(--flamme);position:relative;box-shadow:0 18px 46px rgba(164,80,251,.16)}
+.plan.star::before{content:"LE PLUS CHOISI";position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--flamme);color:#fff;font-size:.68rem;font-weight:900;letter-spacing:.06em;padding:5px 14px;border-radius:99px}
+.plan h3{font-size:1.05rem}
+.plan .tarif{font-size:2.3rem;font-weight:900;margin:12px 0 2px}.plan .tarif small{font-size:.9rem;color:var(--gris);font-weight:600}
+.plan ul{list-style:none;margin:18px 0 24px;flex:1}
+.plan li{padding:6px 0;font-size:.9rem;color:var(--gris)}
+.plan li::before{content:"✓  ";color:var(--sapin);font-weight:900}
+/* faq */
+details{background:#fff;border:1px solid var(--trait);border-radius:13px;padding:16px 20px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer}
+details p{margin-top:10px;color:var(--gris);font-size:.92rem;line-height:1.6}
+/* footer */
+footer{background:var(--encre);color:#B9A8E0;padding:44px 0;margin-top:40px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.85rem}
+footer a{color:#fff;text-decoration:none}
+@media(max-width:640px){.nav a:not(.cta):not(.logo){display:none}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap nav">
+  <a class="logo" href="#"><span class="pastille">P</span>Piloz</a>
+  <a href="#fonctions">Fonctionnalités</a>
+  <a href="#comment">Comment ça marche</a>
+  <a href="#tarifs">Tarifs</a>
+  <a href="#faq">Questions</a>
+  <a class="cta" href="https://xankan.github.io/piloz-app/">Essai gratuit →</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="badge">🚀 CRM + Relances + Devis + Factures — tout-en-un</span>
+  <h1>Ne laissez plus jamais un devis <b>sans relance</b>.</h1>
+  <p>Piloz est le copilote commercial des indépendants et TPE : il suit vos prospects, vous dit <b>qui relancer chaque matin</b>, replanifie tout seul selon vos appels, et transforme vos devis en factures en un clic.</p>
+  <div class="btns">
+    <a class="btn btn-p" href="https://xankan.github.io/piloz-app/">Démarrer mon essai gratuit</a>
+    <a class="btn btn-o" href="#fonctions">Découvrir les fonctionnalités</a>
+  </div>
+  <small>14 jours gratuits · sans carte bancaire · vos données vous appartiennent</small>
+  <div class="appshot">
+    <div class="barre"><i></i><i></i><i></i></div>
+    <div class="fauxkpi">
+      <div><label>Relances du jour</label><b class="v3">3 🔥</b></div>
+      <div><label>Pipeline en cours</label><b class="v1">4 820 €/m</b></div>
+      <div><label>Signé ce mois</label><b class="v2">1 260 €/m</b></div>
+      <div><label>Factures en attente</label><b class="v3">2 340 €</b></div>
+    </div>
+  </div>
+</div></header>
+
+<section id="fonctions"><div class="wrap">
+  <div class="sect-t"><h2>Tout votre commercial, au même endroit</h2>
+  <p>Pensé pour ceux qui vendent ET livrent : zéro usine à gaz, que l'essentiel, bien fait.</p></div>
+  <div class="grid3">
+    <div class="feat"><span class="ico">🔥</span><h3>Relances intelligentes</h3><p>Chaque devis programme sa relance automatiquement. Après un appel, dites simplement le résultat (répondeur, discussion, très positif…) : Piloz replanifie la suite selon votre cadence.</p></div>
+    <div class="feat"><span class="ico">▦</span><h3>Pipeline visuel</h3><p>Glissez-déposez vos dossiers de « Prospection » à « Signé » comme sur un tableau blanc. Montants, alertes et totaux par colonne, en temps réel.</p></div>
+    <div class="feat"><span class="ico">🧾</span><h3>Devis & factures</h3><p>Créez des devis et factures professionnels, transformez un devis accepté en facture en un clic, suivez les paiements et les retards, exportez vos écritures pour votre comptable.</p></div>
+    <div class="feat"><span class="ico">👤</span><h3>Fiches clients 360°</h3><p>Toute l'histoire de chaque client : dossiers, montants signés, timeline complète des échanges, pièces jointes, notes — même dictées à la voix.</p></div>
+    <div class="feat"><span class="ico">🗓</span><h3>Rapport hebdo automatique</h3><p>Chaque lundi, votre semaine est déjà écrite : relances passées, devis envoyés, signatures, comparées à la semaine précédente. Export PDF en deux clics.</p></div>
+    <div class="feat"><span class="ico">☁️</span><h3>Partout, en sécurité</h3><p>Vos données chiffrées et synchronisées sur tous vos appareils, verrouillées par code PIN, avec sauvegarde automatique quotidienne et restauration en un clic.</p></div>
+  </div>
+</div></section>
+
+<section id="comment" style="background:#fff"><div class="wrap">
+  <div class="sect-t"><h2>Opérationnel en 5 minutes</h2></div>
+  <div class="etapes" style="max-width:720px;margin:0 auto">
+    <div class="etape"><div><h3>Créez votre compte</h3><p>14 jours d'essai gratuit, sans carte bancaire. Importez vos clients depuis Excel si vous en avez.</p></div></div>
+    <div class="etape"><div><h3>Saisissez vos devis en cours</h3><p>Client, montant, date — Piloz planifie immédiatement la première relance et prend le relais.</p></div></div>
+    <div class="etape"><div><h3>Ouvrez l'app chaque matin</h3><p>Vos relances du jour vous attendent, avec le téléphone et l'historique de chaque prospect. Appelez, notez le résultat, passez au suivant.</p></div></div>
+    <div class="etape"><div><h3>Signez, facturez, encaissez</h3><p>Devis accepté → facture en un clic → suivi du paiement → export comptable. La boucle est bouclée.</p></div></div>
+  </div>
+</div></section>
+
+<section id="tarifs"><div class="wrap">
+  <div class="sect-t"><h2>Un tarif simple, sans surprise</h2><p>Changez ou arrêtez quand vous voulez. Vos données restent exportables à tout moment.</p></div>
+  <div class="prix">
+    <div class="plan">
+      <h3>Découverte</h3>
+      <div class="tarif">0 € <small>/ 14 jours</small></div>
+      <ul><li>Toutes les fonctionnalités</li><li>Sans carte bancaire</li><li>Import de vos clients</li><li>Support par email</li></ul>
+      <a class="btn btn-o" style="text-align:center" href="https://xankan.github.io/piloz-app/">Essayer gratuitement</a>
+    </div>
+    <div class="plan star">
+      <h3>Solo</h3>
+      <div class="tarif">19 € <small>HT / mois</small></div>
+      <ul><li>CRM + relances illimités</li><li>Devis & factures illimités</li><li>Export comptable</li><li>Pièces jointes 1 Go</li><li>Sauvegardes & restauration</li><li>Support prioritaire</li></ul>
+      <a class="btn btn-p" style="text-align:center" href="https://xankan.github.io/piloz-app/">Choisir Solo</a>
+    </div>
+    <div class="plan">
+      <h3>Annuel</h3>
+      <div class="tarif">190 € <small>HT / an</small></div>
+      <ul><li>Tout le plan Solo</li><li>2 mois offerts</li><li>Accompagnement à la prise en main</li></ul>
+      <a class="btn btn-o" style="text-align:center" href="https://xankan.github.io/piloz-app/">Choisir Annuel</a>
+    </div>
+  </div>
+</div></section>
+
+<section id="faq" style="background:#fff"><div class="wrap" style="max-width:720px">
+  <div class="sect-t"><h2>Questions fréquentes</h2></div>
+  <details><summary>Mes données sont-elles en sécurité ?</summary><p>Oui. Chaque compte est totalement cloisonné dans une base sécurisée : personne d'autre que vous ne peut accéder à vos clients, dossiers ou factures. Un code PIN protège en plus chaque ouverture de l'application, et une sauvegarde automatique quotidienne (14 jours d'historique) permet de restaurer vos données à tout moment.</p></details>
+  <details><summary>Que se passe-t-il à la fin de l'essai gratuit ?</summary><p>Votre accès se met simplement en pause — rien n'est effacé. Activez votre abonnement pour reprendre exactement là où vous en étiez, ou demandez l'export de vos données.</p></details>
+  <details><summary>Mes factures sont-elles conformes ?</summary><p>Piloz génère des documents numérotés avec vos mentions légales, votre SIRET, la TVA et un export des écritures pour votre comptable. Vous restez responsable du paramétrage adapté à votre régime (TVA, franchise en base…) — au moindre doute, votre expert-comptable valide en deux minutes.</p></details>
+  <details><summary>Puis-je importer mes clients existants ?</summary><p>Oui, depuis un fichier Excel ou CSV, avec reconnaissance des colonnes. Et vous exportez tout (clients, dossiers, factures) en CSV quand vous voulez : vos données vous appartiennent.</p></details>
+  <details><summary>Ça marche sur mobile ?</summary><p>Oui, l'application fonctionne dans le navigateur de votre téléphone comme de votre ordinateur, avec la même synchronisation.</p></details>
+</div></section>
+
+<section style="text-align:center;padding:66px 0">
+  <div class="wrap">
+    <h2 style="font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:900;letter-spacing:-.02em">Vos prospects n'attendront pas.<br>Vos relances non plus.</h2>
+    <div class="btns" style="margin-top:26px"><a class="btn btn-p" href="https://xankan.github.io/piloz-app/">Démarrer mon essai gratuit de 14 jours</a></div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div><b style="color:#fff">Piloz</b><br>Le copilote commercial des indépendants et TPE.</div>
+  <div>Contact : <a href="mailto:quentinjernot@outlook.com">quentinjernot@outlook.com</a><br><span style="font-size:.78rem">© 2026 Piloz — piloz.fr — Tous droits réservés</span></div>
+</div></footer>
+
+</body>
+</html>
