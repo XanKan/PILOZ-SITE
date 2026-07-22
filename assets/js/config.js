@@ -7,6 +7,7 @@ export const LINKS = {
   signupEssential: 'https://app.piloz.fr/?mode=signup&plan=essential',
   signupPro: 'https://app.piloz.fr/?mode=signup&plan=pro',
   signupBusiness: 'https://app.piloz.fr/?mode=signup&plan=business',
+  calendly: 'https://calendly.com/erp-piloz/30min',
 };
 
 export const PLANS = [

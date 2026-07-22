@@ -6,6 +6,14 @@
   --primary-light:#E3FBF6;
   --primary-mid:#8FE9D9;
 
+  /* Accent chaud (variété, distinction) */
+  --accent:#FF6B4A;
+  --accent-2:#E85436;
+  --accent-light:#FFEEE9;
+
+  /* Teinte marine douce (variété des badges) */
+  --navy-tint:#E8ECF3;
+
   /* Neutres */
   --ink:#0F1D30;
   --ink-soft:#34495F;
