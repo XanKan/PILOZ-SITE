@@ -11,16 +11,16 @@
   --accent-2:#E85436;
   --accent-light:#FFEEE9;
 
-  /* Neutres */
-  --ink:#0F1D30;
-  --ink-soft:#34495F;
-  --body:#56657A;
-  --body-soft:#8792A3;
+  /* Neutres — contraste marqué (encre proche du noir, texte plus sombre) */
+  --ink:#0A1220;
+  --ink-soft:#2B3648;
+  --body:#42495A;
+  --body-soft:#767F91;
   --paper:#FFFFFF;
-  --paper-alt:#F6F8F9;
+  --paper-alt:#F5F6F8;
   --paper-tint:#EEFAF7;
-  --border:#E4E9EE;
-  --border-soft:#EEF2F5;
+  --border:#E1E4EA;
+  --border-soft:#ECEEF2;
 
   /* États */
   --success:#18864B;
