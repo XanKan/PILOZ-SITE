@@ -1,0 +1,22 @@
+/* Ajustements complémentaires tablette / mobile */
+@media (max-width:1024px){
+  .grid-auto{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+}
+
+@media (max-width:640px){
+  .hero{padding-top:110px}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .btn{width:100%}
+  .cta-band .hero-actions{max-width:340px;margin-inline:auto}
+  .doc-panel{gap:12px}
+  .kpi-row{gap:8px}
+  .kpi-tile b{font-size:.92rem}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+  .security-item{padding:14px}
+  .plan-card{padding:24px}
+}
+
+@media (max-width:400px){
+  .kpi-row{grid-template-columns:1fr 1fr}
+  .board{grid-template-columns:1fr}
+}

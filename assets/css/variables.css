@@ -1,0 +1,67 @@
+/* Design tokens — identité Piloz : turquoise & bleu marine, lumineuse, premium */
+:root{
+  /* Couleurs de marque (issues du logo Piloz) */
+  --primary:#14B8AA;
+  --primary-2:#0C9488;
+  --primary-light:#E3FBF6;
+  --primary-mid:#8FE9D9;
+
+  /* Neutres */
+  --ink:#0F1D30;
+  --ink-soft:#34495F;
+  --body:#56657A;
+  --body-soft:#8792A3;
+  --paper:#FFFFFF;
+  --paper-alt:#F6F8F9;
+  --paper-tint:#EEFAF7;
+  --border:#E4E9EE;
+  --border-soft:#EEF2F5;
+
+  /* États */
+  --success:#18864B;
+  --success-light:#E7F6ED;
+  --warning:#B96A06;
+  --warning-light:#FBF0DD;
+  --danger:#C0362C;
+  --danger-light:#FBEAE8;
+
+  /* Fond sombre (panneaux produit, footer) — bleu marine du logo */
+  --deep:#0E1B30;
+  --deep-2:#152944;
+  --deep-3:#1B3556;
+  --deep-border:#2A4568;
+  --deep-text:#A7B7CE;
+
+  /* Typo */
+  --font-sans:'Albert Sans',system-ui,sans-serif;
+  --font-mono:'Spline Sans Mono',ui-monospace,monospace;
+
+  /* Rayons */
+  --r-sm:10px;
+  --r-md:16px;
+  --r-lg:24px;
+  --r-xl:32px;
+  --r-full:999px;
+
+  /* Ombres */
+  --shadow-sm:0 2px 8px rgba(14,27,48,.05);
+  --shadow-md:0 12px 30px rgba(14,27,48,.08);
+  --shadow-lg:0 24px 60px rgba(14,27,48,.12);
+  --shadow-brand:0 16px 40px rgba(20,184,170,.28);
+
+  /* Rythme */
+  --container:1200px;
+  --container-narrow:800px;
+  --gutter:clamp(20px,4vw,32px);
+  --section-y:clamp(64px,10vw,120px);
+
+  /* Mouvement */
+  --ease:cubic-bezier(.16,1,.3,1);
+  --ease-soft:cubic-bezier(.22,.61,.36,1);
+  --dur-fast:.2s;
+  --dur-med:.5s;
+  --dur-slow:.9s;
+
+  --z-nav:100;
+  --z-overlay:200;
+}
