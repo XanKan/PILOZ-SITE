@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://piloz.fr/sitemap.xml
