@@ -116,13 +116,17 @@ const PLAYERS = {
 
 export function initProductDemo() {
   const stage = document.querySelector('.story-stage');
-  const steps = document.querySelectorAll('.story-step');
+  const steps = Array.from(document.querySelectorAll('.story-step'));
   if (!stage || !steps.length) return;
 
   const views = stage.querySelectorAll('.app-view');
   const navIcons = stage.querySelectorAll('.app-side i');
 
+  let current = null;
+
   function activate(name) {
+    if (name === current) return;
+    current = name;
     views.forEach((v) => v.classList.toggle('is-active', v.dataset.view === name));
     navIcons.forEach((i) => i.classList.toggle('active', i.dataset.view === name));
     steps.forEach((s) => s.classList.toggle('is-current', s.dataset.view === name));
@@ -134,18 +138,40 @@ export function initProductDemo() {
   // État initial
   activate(steps[0].dataset.view);
 
-  if (!('IntersectionObserver' in window)) return;
+  // Détection par position réelle (au lieu d'IntersectionObserver + seuil étroit) :
+  // un scroll rapide peut franchir une bande de déclenchement étroite entre deux
+  // vérifications et « sauter » une étape. On recalcule donc à chaque frame de
+  // scroll quelle étape est la plus proche du centre de l'écran.
+  let ticking = false;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          activate(entry.target.dataset.view);
-        }
-      });
-    },
-    { rootMargin: '-40% 0px -40% 0px', threshold: 0 }
-  );
+  function updateActiveStep() {
+    ticking = false;
+    const center = window.innerHeight / 2;
+    let closest = null;
+    let closestDist = Infinity;
 
-  steps.forEach((step) => observer.observe(step));
+    for (const step of steps) {
+      const rect = step.getBoundingClientRect();
+      if (rect.bottom < 0 || rect.top > window.innerHeight) continue;
+      const stepCenter = rect.top + rect.height / 2;
+      const dist = Math.abs(stepCenter - center);
+      if (dist < closestDist) {
+        closestDist = dist;
+        closest = step;
+      }
+    }
+
+    if (closest) activate(closest.dataset.view);
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(updateActiveStep);
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  updateActiveStep();
 }
