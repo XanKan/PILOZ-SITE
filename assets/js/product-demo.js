@@ -11,6 +11,7 @@ function playDashboard(view) {
     const suffix = el.dataset.suffix || '';
     animateCount(el, end, { prefix, suffix, duration: 900 });
   });
+  revealSequence(Array.from(view.querySelectorAll('.mini-list .row')));
 }
 
 function playPipeline(view) {
@@ -87,7 +88,17 @@ function playClient(view) {
   revealSequence(Array.from(items));
 }
 
+function playPaiements(view) {
+  const rows = view.querySelectorAll('.payment-row');
+  revealSequence(Array.from(rows));
+}
+
 function playAchats(view) {
+  const rows = view.querySelectorAll('.mini-list .row');
+  revealSequence(Array.from(rows));
+}
+
+function playStock(view) {
   const rows = view.querySelectorAll('.stock-row');
   revealSequence(Array.from(rows));
 }
@@ -97,8 +108,10 @@ const PLAYERS = {
   pipeline: playPipeline,
   devis: playDevis,
   facture: playFacture,
+  paiements: playPaiements,
   client: playClient,
   achats: playAchats,
+  stock: playStock,
 };
 
 export function initProductDemo() {
