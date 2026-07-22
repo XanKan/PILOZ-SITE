@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Piloz</title>
+<meta name="description" content="Une question sur Piloz ? Écrivez-nous ou réservez un échange, nous vous répondons rapidement.">
+<link rel="canonical" href="https://piloz.fr/contact.html">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#070B14">
+<link rel="icon" type="image/png" href="assets/icons/favicon-192.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Piloz">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://piloz.fr/contact.html">
+<meta property="og:title" content="Contact — Piloz">
+<meta property="og:description" content="Une question sur Piloz ? Écrivez-nous ou réservez un échange, nous vous répondons rapidement.">
+<meta property="og:image" content="https://piloz.fr/assets/images/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact — Piloz">
+<meta name="twitter:description" content="Une question sur Piloz ? Écrivez-nous ou réservez un échange, nous vous répondons rapidement.">
+<meta name="twitter:image" content="https://piloz.fr/assets/images/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800;900&family=Spline+Sans+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><img src="assets/images/brand-full.png" alt="Piloz" class="brand-logo"></a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="index.html#produit">Produit</a>
+      <a href="index.html#fonctionnalites">Fonctionnalités</a>
+      <a href="index.html#solutions">Solutions</a>
+      <a href="index.html#tarifs">Tarifs</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-ghost" href="https://app.piloz.fr/?mode=login">Connexion</a>
+      <a class="btn btn-primary btn-sm" href="https://app.piloz.fr/?mode=signup">Essayer gratuitement</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu"><span></span></button>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Navigation mobile">
+    <a href="index.html#produit">Produit</a>
+    <a href="index.html#fonctionnalites">Fonctionnalités</a>
+    <a href="index.html#solutions">Solutions</a>
+    <a href="index.html#tarifs">Tarifs</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <div class="nav-actions">
+      <a class="btn btn-outline btn-block" href="https://app.piloz.fr/?mode=login">Connexion</a>
+      <a class="btn btn-primary btn-block" href="https://app.piloz.fr/?mode=signup">Essayer gratuitement</a>
+    </div>
+  </nav>
+</header>
+
+<main id="contenu">
+
+  <section class="hero" style="padding-bottom:0">
+    <div class="container hero-inner">
+      <span class="eyebrow">Contact</span>
+      <h1 style="font-size:clamp(2rem,4.4vw,3rem)">Parlons de votre activité</h1>
+      <p class="lede">Une question sur Piloz, sur les offres, ou besoin d’un accompagnement particulier ? Écrivez-nous, nous vous répondons rapidement.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout reveal">
+        <form id="contact-form" class="contact-form" action="https://formsubmit.co/ajax/erp-piloz@outlook.com" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Nouveau message depuis piloz.fr">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+
+          <div class="form-row">
+            <label for="cf-name">Nom</label>
+            <input id="cf-name" name="Nom" type="text" required autocomplete="name">
+          </div>
+          <div class="form-row">
+            <label for="cf-email">E-mail</label>
+            <input id="cf-email" name="Email" type="email" required autocomplete="email">
+          </div>
+          <div class="form-row">
+            <label for="cf-company">Entreprise <span>(optionnel)</span></label>
+            <input id="cf-company" name="Entreprise" type="text" autocomplete="organization">
+          </div>
+          <div class="form-row">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="Message" required></textarea>
+          </div>
+
+          <button class="btn btn-primary btn-block" type="submit">Envoyer le message</button>
+          <p class="form-status" id="contact-status" aria-live="polite"></p>
+        </form>
+
+        <div class="contact-side">
+          <div class="contact-card">
+            <h3>Par e-mail</h3>
+            <p>Écrivez-nous directement à<br><a href="mailto:erp-piloz@outlook.com">erp-piloz@outlook.com</a></p>
+          </div>
+          <div class="contact-card">
+            <h3>Réserver un échange</h3>
+            <p>Un besoin particulier ou plus de 15 utilisateurs ?<br><a href="https://calendly.com/erp-piloz/30min" target="_blank" rel="noopener">Réservez un créneau de 15 minutes</a></p>
+          </div>
+          <div class="contact-card">
+            <h3>Délai de réponse</h3>
+            <p>Nous répondons généralement sous 24 à 48h ouvrées.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><img src="assets/images/brand-mark.png" alt="" class="brand-icon">Piloz</a>
+        <p>La gestion commerciale des indépendants, artisans, TPE et PME : du premier contact jusqu’à l’encaissement.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Produit</h4>
+        <a href="index.html#fonctionnalites">Fonctionnalités</a>
+        <a href="index.html#tarifs">Tarifs</a>
+        <a href="https://app.piloz.fr/?mode=login">Connexion</a>
+        <a href="https://app.piloz.fr/?mode=signup">Essai gratuit</a>
+      </div>
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <a href="index.html#solutions">Indépendants</a>
+        <a href="index.html#solutions">Artisans</a>
+        <a href="index.html#solutions">TPE</a>
+        <a href="index.html#solutions">Gestion commerciale</a>
+      </div>
+      <div class="footer-col">
+        <h4>Ressources</h4>
+        <a href="index.html#faq">FAQ</a>
+        <a href="legal/centre-aide.html">Centre d’aide</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <a href="legal/mentions-legales.html">Mentions légales</a>
+        <a href="legal/cgu.html">Conditions générales d’utilisation</a>
+        <a href="legal/confidentialite.html">Politique de confidentialité</a>
+        <a href="legal/cookies.html">Gestion des cookies</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Piloz — piloz.fr</span>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
