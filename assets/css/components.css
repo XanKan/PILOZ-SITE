@@ -22,15 +22,17 @@
 /* ===== Navigation ===== */
 .site-nav{
   position:fixed;top:0;left:0;right:0;z-index:var(--z-nav);
-  padding:18px 0;
-  transition:background var(--dur-fast) var(--ease),box-shadow var(--dur-fast) var(--ease),padding var(--dur-fast) var(--ease),backdrop-filter var(--dur-fast) var(--ease);
+  padding:16px 0;
+  background:rgba(255,255,255,.7);
+  border-bottom:1px solid transparent;
+  transition:background var(--dur-fast) var(--ease),border-color var(--dur-fast) var(--ease),padding var(--dur-fast) var(--ease),backdrop-filter var(--dur-fast) var(--ease);
 }
 .site-nav.is-scrolled{
-  background:rgba(255,255,255,.82);
+  background:rgba(255,255,255,.92);
   backdrop-filter:blur(14px) saturate(160%);
   -webkit-backdrop-filter:blur(14px) saturate(160%);
-  box-shadow:0 1px 0 var(--border),0 12px 30px rgba(18,20,43,.05);
-  padding:12px 0;
+  border-bottom-color:var(--border);
+  padding:11px 0;
 }
 .nav-inner{display:flex;align-items:center;gap:clamp(16px,3vw,40px)}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;letter-spacing:-.02em;color:var(--ink)}
@@ -242,8 +244,16 @@
   padding:32px;display:flex;flex-direction:column;position:relative;
 }
 .plan-card.is-featured{
-  border-color:var(--primary);box-shadow:0 20px 48px rgba(20,184,170,.14);
+  background:var(--ink);border-color:var(--ink);color:#fff;
 }
+.plan-card.is-featured .plan-name,
+.plan-card.is-featured .plan-price{color:#fff}
+.plan-card.is-featured .plan-desc,
+.plan-card.is-featured .plan-price span,
+.plan-card.is-featured .plan-price-sub{color:rgba(255,255,255,.6)}
+.plan-card.is-featured .plan-features li{color:rgba(255,255,255,.85)}
+.plan-card.is-featured .plan-features li::before{color:var(--primary-mid)}
+.plan-card.is-featured .plan-features li.is-inherit{color:#fff;border-top-color:rgba(255,255,255,.2)}
 .plan-badge{
   position:absolute;top:-13px;left:50%;transform:translateX(-50%);
   background:var(--primary);color:#fff;font-size:.68rem;font-weight:800;
@@ -347,14 +357,14 @@
 
 /* ===== CTA final ===== */
 .cta-band{
-  background:linear-gradient(135deg,var(--primary) 0%,#0B7E73 100%);
+  background:var(--ink);
   border-radius:var(--r-xl);padding:clamp(48px,8vw,80px) clamp(24px,6vw,60px);
   text-align:center;color:#fff;margin:0 var(--gutter);
   position:relative;overflow:hidden;
 }
 .cta-band::before{
   content:"";position:absolute;inset:0;
-  background:radial-gradient(520px 260px at 85% 0%,rgba(255,107,74,.35),transparent 70%);
+  background:radial-gradient(560px 280px at 15% 0%,rgba(20,184,170,.28),transparent 70%);
 }
 .cta-band h2{color:#fff;position:relative}
 .cta-band p{color:rgba(255,255,255,.85);max-width:520px;margin:14px auto 30px;position:relative}

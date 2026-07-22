@@ -29,10 +29,13 @@ p{color:var(--body)}
 /* Typo utilitaire */
 .eyebrow{
   display:inline-flex;align-items:center;gap:8px;
-  font-size:.8rem;font-weight:700;letter-spacing:.04em;
-  color:var(--primary);
-  background:var(--primary-light);
-  padding:7px 14px;border-radius:var(--r-full);
+  font-family:var(--font-mono);
+  font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--primary-2);
+  padding-left:14px;position:relative;
+}
+.eyebrow::before{
+  content:"";position:absolute;left:0;top:2px;bottom:2px;width:3px;background:var(--primary);
 }
 
 .lede{font-size:clamp(1.02rem,1.6vw,1.2rem);color:var(--body);line-height:1.65}
