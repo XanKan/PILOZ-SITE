@@ -3,182 +3,867 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Piloz — Le copilote commercial des indépendants et TPE</title>
-<meta name="description" content="Prospection, relances automatiques, devis et factures : Piloz pilote votre activité commerciale de bout en bout. Essai gratuit 14 jours.">
+<title>Piloz — Gestion commerciale, devis, factures et suivi des paiements</title>
+<meta name="description" content="Piloz centralise votre suivi commercial, vos devis, vos factures, vos paiements, vos achats et votre stock dans une interface simple. Essai gratuit 14 jours.">
+<link rel="canonical" href="https://piloz.fr/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0E1B30">
+<link rel="icon" type="image/png" href="assets/icons/favicon-192.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Piloz">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://piloz.fr/">
+<meta property="og:title" content="Piloz — Gestion commerciale, devis, factures et suivi des paiements">
+<meta property="og:description" content="Piloz centralise votre suivi commercial, vos devis, vos factures, vos paiements, vos achats et votre stock dans une interface simple.">
+<meta property="og:image" content="https://piloz.fr/assets/images/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Piloz — Gestion commerciale, devis, factures et suivi des paiements">
+<meta name="twitter:description" content="Piloz centralise votre suivi commercial, vos devis, vos factures, vos paiements, vos achats et votre stock dans une interface simple.">
+<meta name="twitter:image" content="https://piloz.fr/assets/images/og-image.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800;900&family=Spline+Sans+Mono:wght@500;700&display=swap" rel="stylesheet">
-<style>
-:root{--flamme:#A450FB;--flamme2:#8332E8;--encre:#1D1233;--encre2:#2A1B4A;--fond:#F7F5FC;--carte:#fff;--gris:#6B6580;--trait:#E9E4F5;--sapin:#1E7A46;--r:18px}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Albert Sans',sans-serif;color:var(--encre);background:var(--fond)}
-.mono{font-family:'Spline Sans Mono',monospace}
-a{color:inherit}
-.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
-/* nav */
-nav{position:sticky;top:0;background:rgba(247,245,252,.92);backdrop-filter:blur(8px);z-index:10;border-bottom:1px solid var(--trait)}
-.nav{display:flex;align-items:center;gap:26px;padding:14px 0}
-.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.2rem;letter-spacing:-.02em}
-.pastille{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--flamme),#5B21A8);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.15rem;font-weight:800}
-.nav a{text-decoration:none;font-weight:600;font-size:.92rem;color:var(--gris)}
-.nav a:hover{color:var(--encre)}
-.nav .cta{margin-left:auto;background:#fff;border:2px solid var(--trait);color:var(--encre);padding:10px 20px;border-radius:11px;font-weight:800}
-.nav .cta:hover{border-color:var(--flamme);color:var(--flamme2)}
-/* hero */
-.hero{padding:78px 0 60px;text-align:center;background:radial-gradient(ellipse 900px 480px at 50% -80px,#EFE4FF 0%,var(--fond) 62%)}
-.hero .badge{display:inline-block;background:#EFE4FF;color:var(--flamme2);font-weight:800;font-size:.8rem;padding:7px 16px;border-radius:99px;margin-bottom:18px;letter-spacing:.03em}
-h1{font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.1;letter-spacing:-.03em;font-weight:900;max-width:820px;margin:0 auto 18px}
-h1 b{color:var(--flamme)}
-.hero p{font-size:1.14rem;color:var(--gris);max-width:640px;margin:0 auto 30px;line-height:1.6}
-.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-block;text-decoration:none;font-weight:800;padding:15px 30px;border-radius:13px;font-size:1rem}
-.btn-p{background:var(--flamme);color:#fff;box-shadow:0 10px 26px rgba(164,80,251,.35)}
-.btn-p:hover{background:var(--flamme2)}
-.btn-o{background:#fff;border:2px solid var(--trait);color:var(--encre)}
-.hero small{display:block;margin-top:14px;color:var(--gris);font-size:.85rem}
-/* bandeau app */
-.appshot{margin:52px auto 0;max-width:880px;background:var(--encre);border-radius:22px;padding:20px;box-shadow:0 34px 80px rgba(29,18,51,.3);text-align:left;color:#fff}
-.appshot .barre{display:flex;gap:7px;margin-bottom:14px}
-.appshot .barre i{width:11px;height:11px;border-radius:50%;background:#4A3A6E;display:block}
-.fauxkpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
-.fauxkpi div{background:var(--encre2);border-radius:13px;padding:15px}
-.fauxkpi label{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:#B9A8E0;font-weight:700}
-.fauxkpi b{display:block;font-size:1.5rem;margin-top:5px;font-family:'Spline Sans Mono'}
-.v1{color:#C89BFF}.v2{color:#7FE0A7}.v3{color:#FFC97F}
-/* sections */
-section{padding:74px 0}
-.sect-t{text-align:center;margin-bottom:44px}
-.sect-t h2{font-size:clamp(1.5rem,3.4vw,2.2rem);letter-spacing:-.02em;font-weight:900}
-.sect-t p{color:var(--gris);margin-top:10px;font-size:1.02rem}
-.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.feat{background:var(--carte);border:1px solid var(--trait);border-radius:var(--r);padding:26px}
-.feat .ico{font-size:1.7rem}
-.feat h3{margin:12px 0 8px;font-size:1.08rem}
-.feat p{color:var(--gris);font-size:.92rem;line-height:1.6}
-/* étapes */
-.etapes{counter-reset:e}
-.etape{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--trait);border-radius:var(--r);padding:22px;margin-bottom:14px}
-.etape::before{counter-increment:e;content:counter(e);flex-shrink:0;width:40px;height:40px;border-radius:50%;background:var(--flamme);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
-.etape h3{margin-bottom:4px}
-.etape p{color:var(--gris);font-size:.92rem}
-/* pricing */
-.prix{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;align-items:stretch}
-.plan{background:#fff;border:2px solid var(--trait);border-radius:var(--r);padding:30px;display:flex;flex-direction:column}
-.plan.star{border-color:var(--flamme);position:relative;box-shadow:0 18px 46px rgba(164,80,251,.16)}
-.plan.star::before{content:"LE PLUS CHOISI";position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--flamme);color:#fff;font-size:.68rem;font-weight:900;letter-spacing:.06em;padding:5px 14px;border-radius:99px}
-.plan h3{font-size:1.05rem}
-.plan .tarif{font-size:2.3rem;font-weight:900;margin:12px 0 2px}.plan .tarif small{font-size:.9rem;color:var(--gris);font-weight:600}
-.plan ul{list-style:none;margin:18px 0 24px;flex:1}
-.plan li{padding:6px 0;font-size:.9rem;color:var(--gris)}
-.plan li::before{content:"✓  ";color:var(--sapin);font-weight:900}
-/* faq */
-details{background:#fff;border:1px solid var(--trait);border-radius:13px;padding:16px 20px;margin-bottom:10px}
-summary{font-weight:700;cursor:pointer}
-details p{margin-top:10px;color:var(--gris);font-size:.92rem;line-height:1.6}
-/* footer */
-footer{background:var(--encre);color:#B9A8E0;padding:44px 0;margin-top:40px}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.85rem}
-footer a{color:#fff;text-decoration:none}
-@media(max-width:640px){.nav a:not(.cta):not(.logo){display:none}}
-</style>
+
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Piloz",
+  "url": "https://piloz.fr/",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "Piloz centralise le suivi commercial, les devis, les factures, les paiements, les achats et le stock dans une interface unique.",
+  "offers": [
+    {"@type": "Offer", "name": "Essentiel", "price": "29", "priceCurrency": "EUR", "url": "https://app.piloz.fr/?mode=signup&plan=essential"},
+    {"@type": "Offer", "name": "Pro", "price": "59", "priceCurrency": "EUR", "url": "https://app.piloz.fr/?mode=signup&plan=pro"},
+    {"@type": "Offer", "name": "Business", "price": "99", "priceCurrency": "EUR", "url": "https://app.piloz.fr/?mode=signup&plan=business"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Combien de temps dure l’essai ?", "acceptedAnswer": {"@type": "Answer", "text": "L’essai gratuit dure 14 jours, sans engagement, avec accès à l’ensemble des fonctionnalités de l’offre choisie."}},
+    {"@type": "Question", "name": "Dois-je installer Piloz ?", "acceptedAnswer": {"@type": "Answer", "text": "Non, Piloz fonctionne directement dans votre navigateur, sans installation, sur ordinateur, tablette ou mobile."}},
+    {"@type": "Question", "name": "Mes données sont-elles séparées de celles des autres entreprises ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, chaque entreprise dispose de son propre espace : vos clients, devis, factures et documents ne sont jamais mélangés avec ceux d’un autre compte."}},
+    {"@type": "Question", "name": "Puis-je créer des devis et factures personnalisés ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, avec votre logo, vos couleurs, votre pied de page et vos coordonnées bancaires selon l’offre choisie."}},
+    {"@type": "Question", "name": "Puis-je suivre les factures impayées ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, Piloz distingue les factures à venir, en retard, partiellement encaissées et encaissées."}},
+    {"@type": "Question", "name": "Piloz gère-t-il les achats et le stock ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui à partir de l’offre Pro : fournisseurs, commandes fournisseurs, réceptions et suivi de stock."}},
+    {"@type": "Question", "name": "Puis-je ajouter plusieurs utilisateurs ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, à partir de l’offre Pro, jusqu’à 5 utilisateurs, et jusqu’à 15 utilisateurs avec l’offre Business."}},
+    {"@type": "Question", "name": "Puis-je changer d’offre ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, vous pouvez changer d’offre à tout moment depuis votre compte."}},
+    {"@type": "Question", "name": "Puis-je importer mes clients et articles ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, vous pouvez importer vos clients et vos articles pour démarrer sans ressaisie."}},
+    {"@type": "Question", "name": "Piloz remplace-t-il mon expert-comptable ?", "acceptedAnswer": {"@type": "Answer", "text": "Piloz facilite la gestion commerciale et la préparation des données, mais ne remplace pas l’accompagnement comptable ou juridique d’un professionnel."}}
+  ]
+}
+</script>
 </head>
 <body>
 
-<nav><div class="wrap nav">
-  <a class="logo" href="#"><span class="pastille">P</span>Piloz</a>
-  <a href="#fonctions">Fonctionnalités</a>
-  <a href="#comment">Comment ça marche</a>
-  <a href="#tarifs">Tarifs</a>
-  <a href="#faq">Questions</a>
-  <a class="cta" href="https://app.piloz.fr/?mode=login">Connexion</a>
-</div></nav>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
 
-<header class="hero"><div class="wrap">
-  <span class="badge">🚀 CRM + Relances + Devis + Factures — tout-en-un</span>
-  <h1>Ne laissez plus jamais un devis <b>sans relance</b>.</h1>
-  <p>Piloz est le copilote commercial des indépendants et TPE : il suit vos prospects, vous dit <b>qui relancer chaque matin</b>, replanifie tout seul selon vos appels, et transforme vos devis en factures en un clic.</p>
-  <div class="btns">
-    <a class="btn btn-p" href="https://app.piloz.fr/?mode=signup">Démarrer mon essai gratuit</a>
-    <a class="btn btn-o" href="#fonctions">Découvrir les fonctionnalités</a>
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#hero"><img src="assets/images/brand-full.png" alt="Piloz" class="brand-logo"></a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#produit">Produit</a>
+      <a href="#fonctionnalites">Fonctionnalités</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-ghost" href="https://app.piloz.fr/?mode=login">Connexion</a>
+      <a class="btn btn-primary btn-sm" href="https://app.piloz.fr/?mode=signup">Essayer gratuitement</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu"><span></span></button>
   </div>
-  <small>14 jours gratuits · sans carte bancaire · vos données vous appartiennent</small>
-  <div class="appshot">
-    <div class="barre"><i></i><i></i><i></i></div>
-    <div class="fauxkpi">
-      <div><label>Relances du jour</label><b class="v3">3 🔥</b></div>
-      <div><label>Pipeline en cours</label><b class="v1">4 820 €/m</b></div>
-      <div><label>Signé ce mois</label><b class="v2">1 260 €/m</b></div>
-      <div><label>Factures en attente</label><b class="v3">2 340 €</b></div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Navigation mobile">
+    <a href="#produit">Produit</a>
+    <a href="#fonctionnalites">Fonctionnalités</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#faq">FAQ</a>
+    <div class="nav-actions">
+      <a class="btn btn-outline btn-block" href="https://app.piloz.fr/?mode=login">Connexion</a>
+      <a class="btn btn-primary btn-block" href="https://app.piloz.fr/?mode=signup">Essayer gratuitement</a>
+    </div>
+  </nav>
+</header>
+
+<main id="contenu">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="container hero-inner">
+      <span class="eyebrow">Gestion commerciale nouvelle génération</span>
+      <h1>Toute votre gestion commerciale, <em>enfin réunie</em>.</h1>
+      <p class="lede">Piloz centralise votre suivi commercial, vos devis, vos factures, vos paiements, vos achats et votre stock dans une interface simple et connectée.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://app.piloz.fr/?mode=signup">Essayer gratuitement</a>
+        <a class="btn btn-outline" href="#produit">Découvrir Piloz</a>
+      </div>
+      <span class="hero-meta">14 jours d’essai gratuit · Sans engagement</span>
+    </div>
+  </section>
+
+  <!-- APERÇU ANIMÉ DU PRODUIT -->
+  <section class="section" id="produit">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Le produit</span>
+        <h2>Du premier contact jusqu’à l’encaissement</h2>
+        <p class="lede">Une interface unique qui suit votre activité commerciale, étape par étape. Faites défiler pour voir Piloz en action.</p>
+      </div>
+
+      <div class="split-story">
+        <div class="story-steps">
+
+          <article class="story-step" data-view="dashboard">
+            <span class="eyebrow">Tableau de bord</span>
+            <h3>Les informations importantes, sans surcharge</h3>
+            <p>Chiffre d’affaires, encaissé, reste à encaisser, devis en attente : votre activité commerciale en un coup d’œil, comparée au mois précédent.</p>
+          </article>
+
+          <article class="story-step" data-view="pipeline">
+            <span class="eyebrow">Pipeline</span>
+            <h3>Du premier contact à la signature</h3>
+            <p>Visualisez vos dossiers commerciaux par étape, glissez-les d’une colonne à l’autre et suivez le montant total de votre pipeline en temps réel.</p>
+          </article>
+
+          <article class="story-step" data-view="devis">
+            <span class="eyebrow">Devis</span>
+            <h3>Un devis créé en quelques lignes</h3>
+            <p>Sélectionnez le client, ajoutez vos articles depuis votre catalogue : la TVA et le total se calculent automatiquement. Finalisez et envoyez en un clic.</p>
+          </article>
+
+          <article class="story-step" data-view="facture">
+            <span class="eyebrow">Facture</span>
+            <h3>Le devis accepté devient une facture</h3>
+            <p>Convertissez votre devis en facture sans ressaisie, enregistrez les paiements reçus et suivez précisément ce qu’il reste à encaisser.</p>
+          </article>
+
+          <article class="story-step" data-view="client">
+            <span class="eyebrow">Client</span>
+            <h3>Toute la relation client, au même endroit</h3>
+            <p>Activités, devis, factures et paiements : chaque fiche client rassemble l’historique complet de votre relation commerciale.</p>
+          </article>
+
+          <article class="story-step" data-view="achats">
+            <span class="eyebrow">Achats &amp; stock</span>
+            <h3>Vos réceptions mettent à jour votre stock</h3>
+            <p>Passez vos commandes fournisseurs, réceptionnez-les et laissez Piloz ajuster automatiquement vos niveaux de stock.</p>
+          </article>
+
+        </div>
+
+        <div class="story-stage">
+          <div class="device-wrap">
+            <div class="device-frame">
+              <div class="device-bar">
+                <i></i><i></i><i></i>
+                <span class="url-pill mono">app.piloz.fr</span>
+              </div>
+              <div class="device-screen">
+                <div class="app-shell">
+                  <aside class="app-side" aria-hidden="true">
+                    <i class="active" data-view="dashboard" title="Tableau de bord"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg></i>
+                    <i data-view="pipeline" title="Pipeline"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="5" height="16" rx="1.2"/><rect x="10" y="4" width="5" height="10" rx="1.2"/><rect x="17" y="4" width="4" height="13" rx="1.2"/></svg></i>
+                    <i data-view="devis" title="Devis"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h9l4 4v16H6z"/><path d="M9 12h7M9 16h7M9 8h3"/></svg></i>
+                    <i data-view="facture" title="Facture"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12v20l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg></i>
+                    <i data-view="client" title="Client"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.4"/><path d="M5 21c1.2-4.4 4.6-6.5 7-6.5s5.8 2.1 7 6.5"/></svg></i>
+                    <i data-view="achats" title="Achats"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg></i>
+                  </aside>
+
+                  <div class="app-main">
+
+                    <!-- Vue tableau de bord -->
+                    <div class="app-view is-active" data-view="dashboard">
+                      <div class="app-view-head"><h4>Tableau de bord</h4><span class="app-pill">Ce mois-ci</span></div>
+                      <div class="kpi-row">
+                        <div class="kpi-tile"><label>Chiffre d’affaires</label><b data-count="18450" data-suffix=" €" class="count-up">0 €</b><span class="trend up">+12 %</span></div>
+                        <div class="kpi-tile"><label>Encaissé</label><b data-count="14200" data-suffix=" €" class="count-up">0 €</b><span class="trend up">+8 %</span></div>
+                        <div class="kpi-tile"><label>Reste à encaisser</label><b data-count="4250" data-suffix=" €" class="count-up">0 €</b></div>
+                        <div class="kpi-tile"><label>Factures en retard</label><b data-count="2" class="count-up">0</b><span class="trend down">-1</span></div>
+                      </div>
+                      <div class="chart-card">
+                        <svg viewBox="0 0 300 70" width="100%" height="70" preserveAspectRatio="none">
+                          <path class="chart-line" d="M0,55 L50,48 L100,50 L150,30 L200,34 L250,16 L300,12" fill="none" stroke="#14B8AA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <div class="mini-list">
+                        <div class="row"><b>Devis envoyé</b> — <span>Atelier Dupuis, il y a 2 h</span></div>
+                        <div class="row"><b>Paiement reçu</b> — <span>1 020 €, Atelier Dupuis</span></div>
+                        <div class="row"><b>Relance planifiée</b> — <span>Menuiserie Lefevre, demain</span></div>
+                      </div>
+                    </div>
+
+                    <!-- Vue pipeline -->
+                    <div class="app-view" data-view="pipeline">
+                      <div class="app-view-head"><h4>Pipeline commercial</h4><span class="app-pill">4 dossiers actifs</span></div>
+                      <div class="board">
+                        <div class="board-col" data-column="prospection">
+                          <h5>Prospection</h5><span class="total">1 200 €</span>
+                          <div class="board-cards">
+                            <div class="board-card"><b>Studio Armel</b><span>Aménagement bureau</span></div>
+                          </div>
+                        </div>
+                        <div class="board-col" data-column="devis">
+                          <h5>Devis envoyé</h5><span class="total" data-after="1 850 €">2 400 €</span>
+                          <div class="board-cards">
+                            <div class="board-card demo-card"><b>Menuiserie Lefevre</b><span>2 400 €</span></div>
+                          </div>
+                        </div>
+                        <div class="board-col" data-column="accepte">
+                          <h5>Accepté</h5><span class="total" data-after="2 400 €">0 €</span>
+                          <div class="board-cards"></div>
+                        </div>
+                        <div class="board-col" data-column="facture">
+                          <h5>Facturé</h5><span class="total">1 020 €</span>
+                          <div class="board-cards">
+                            <div class="board-card"><b>Atelier Dupuis</b><span>1 020 €</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Vue devis -->
+                    <div class="app-view" data-view="devis">
+                      <div class="app-view-head"><h4>Devis DEV-2026-041</h4><span class="doc-status">Brouillon</span></div>
+                      <div class="doc-panel">
+                        <div class="doc-editor">
+                          <div class="doc-row"><span>Client</span><b>Atelier Dupuis</b></div>
+                          <div class="doc-row"><span>Prestation de conseil</span><b>1 × 850,00 €</b></div>
+                          <div class="doc-row"><span>TVA</span><b>20 %</b></div>
+                          <div class="doc-total"><span>Total TTC</span><span>1 020,00 €</span></div>
+                        </div>
+                        <div class="doc-actions">
+                          <button class="doc-mini-btn" type="button">Aperçu PDF</button>
+                          <button class="doc-mini-btn" type="button">Envoyer au client</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Vue facture -->
+                    <div class="app-view" data-view="facture">
+                      <div class="app-view-head"><h4>Facture FAC-2026-014</h4><span class="doc-status">À encaisser</span></div>
+                      <div class="doc-panel">
+                        <div class="doc-editor">
+                          <div class="doc-row"><span>Client</span><b>Atelier Dupuis</b></div>
+                          <div class="doc-row"><span>Origine</span><b>Devis DEV-2026-041</b></div>
+                          <div class="doc-row"><span>Échéance</span><b>30 jours</b></div>
+                          <div class="doc-total"><span>Total TTC</span><span>1 020,00 €</span></div>
+                        </div>
+                        <div class="doc-actions">
+                          <button class="doc-mini-btn" type="button">Enregistrer un paiement</button>
+                          <button class="doc-mini-btn" type="button">Télécharger le PDF</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Vue client -->
+                    <div class="app-view" data-view="client">
+                      <div class="app-view-head"><h4>Fiche client</h4><span class="app-pill">Atelier Dupuis</span></div>
+                      <div class="client-card">
+                        <div class="client-id">
+                          <div class="client-avatar">AD</div>
+                          <div style="font-weight:800">Atelier Dupuis</div>
+                          <div style="color:var(--body-soft);font-size:.8rem;margin-top:4px">Menuiserie · Rennes</div>
+                        </div>
+                        <div class="timeline">
+                          <div class="timeline-item"><b>Activité</b><span>Appel de qualification</span></div>
+                          <div class="timeline-item"><b>Devis</b><span>DEV-2026-041 envoyé</span></div>
+                          <div class="timeline-item"><b>Facture</b><span>FAC-2026-014 émise</span></div>
+                          <div class="timeline-item"><b>Paiement</b><span>1 020 € reçu</span></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Vue achats / stock -->
+                    <div class="app-view" data-view="achats">
+                      <div class="app-view-head"><h4>Stock après réception</h4><span class="app-pill">Commande CMD-118 reçue</span></div>
+                      <div class="stock-row" style="--fill:42%"><span>Bois massif chêne</span><div class="stock-bar"><i></i></div><span>42 %</span></div>
+                      <div class="stock-row" style="--fill:78%"><span>Vis inox 4×30</span><div class="stock-bar"><i></i></div><span>78 %</span></div>
+                      <div class="stock-row" style="--fill:18%"><span>Vernis mat 1 L</span><div class="stock-bar"><i></i></div><span>18 %</span></div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BÉNÉFICES -->
+  <section class="section section-alt" id="fonctionnalites">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Bénéfices</span>
+        <h2>Ce que Piloz change concrètement</h2>
+        <p class="lede">Pas de promesse abstraite : voici précisément ce que vous gagnez au quotidien.</p>
+      </div>
+      <div class="grid-auto reveal-stagger">
+        <div class="feature-card">
+          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="5" rx="1.4"/><rect x="3" y="10" width="18" height="5" rx="1.4"/><rect x="3" y="17" width="18" height="4" rx="1.4"/></svg></div>
+          <h3>Tout centraliser</h3>
+          <p>Prospects, devis, factures, paiements, achats et stock dans une seule application, au lieu d’un tableur, d’un logiciel de facturation et de notes éparpillées.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+          <h3>Gagner du temps</h3>
+          <p>Devis transformés en factures en un clic, catalogue d’articles réutilisable, modèles de documents prêts à l’emploi : moins de ressaisie, plus d’activité.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M7 21V10M12 21V4M17 21v-7"/></svg></div>
+          <h3>Suivre chaque encaissement</h3>
+          <p>Une vue claire de ce qui est encaissé, de ce qui reste à encaisser et de ce qui est en retard, facture par facture.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19l5-6 4 3 7-9"/><path d="M15 7h5v5"/></svg></div>
+          <h3>Prendre de meilleures décisions</h3>
+          <p>Un tableau de bord qui compare votre activité au mois précédent pour repérer ce qui progresse et ce qui doit être surveillé.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUIVI COMMERCIAL ET PIPELINE -->
+  <section class="section" id="pipeline-detail">
+    <div class="container split reveal">
+      <div class="split-text">
+        <span class="eyebrow">Suivi commercial</span>
+        <h2>Du premier contact à la signature</h2>
+        <p class="lede">Visualisez vos dossiers commerciaux, planifiez les prochaines actions et suivez automatiquement l’avancement de vos devis.</p>
+        <div class="pipeline-track" aria-hidden="true">
+          <span class="status-chip chip-partial">Devis envoyé</span><span class="arrow">→</span>
+          <span class="status-chip">En attente</span><span class="arrow">→</span>
+          <span class="status-chip is-active chip-partial">Accepté</span><span class="arrow">→</span>
+          <span class="status-chip">Facturation</span><span class="arrow">→</span>
+          <span class="status-chip chip-paid">Encaissé</span>
+        </div>
+      </div>
+      <div class="split-media">
+        <div class="board" style="max-width:460px">
+          <div class="board-col"><h5>Prospection</h5><span class="total">1 200 €</span>
+            <div class="board-cards"><div class="board-card"><b>Studio Armel</b><span>Aménagement</span></div></div>
+          </div>
+          <div class="board-col"><h5>Devis envoyé</h5><span class="total">2 400 €</span>
+            <div class="board-cards"><div class="board-card"><b>Menuiserie Lefevre</b><span>2 400 €</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEVIS ET FACTURES -->
+  <section class="section section-alt" id="documents">
+    <div class="container split reverse reveal">
+      <div class="split-text">
+        <span class="eyebrow">Devis &amp; factures</span>
+        <h2>Créez, finalisez et suivez vos documents sans ressaisie</h2>
+        <p class="lede">Sélection du client, catalogue d’articles, prix d’achat, marge et TVA calculés automatiquement. Modèles personnalisés, export PDF, acomptes et avoirs.</p>
+        <ul class="plan-features" style="max-width:420px">
+          <li>Conversion d’un devis en facture en un clic</li>
+          <li>Factures d’acompte, de situation et de solde</li>
+          <li>Avoirs et suivi des paiements</li>
+          <li>Modèles personnalisés avec votre logo</li>
+        </ul>
+      </div>
+      <div class="split-media">
+        <div class="doc-panel" style="max-width:440px">
+          <div class="doc-editor">
+            <div class="doc-row shown"><span>Client</span><b>Atelier Dupuis</b></div>
+            <div class="doc-row shown"><span>Prestation de conseil</span><b>1 × 850,00 €</b></div>
+            <div class="doc-row shown"><span>TVA</span><b>20 %</b></div>
+            <div class="doc-total"><span>Total TTC</span><span>1 020,00 €</span></div>
+          </div>
+          <div class="doc-actions">
+            <span class="doc-status status-ok">Finalisé</span>
+            <button class="doc-mini-btn" type="button">Convertir en facture</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIEMENTS ET ÉCHÉANCES -->
+  <section class="section" id="paiements">
+    <div class="container split reveal">
+      <div class="split-text">
+        <span class="eyebrow">Paiements</span>
+        <h2>Gardez toujours un œil sur ce qui doit être encaissé</h2>
+        <p class="lede">Factures à encaisser, paiements partiels, retards et avoirs : tout est suivi automatiquement, échéance par échéance.</p>
+      </div>
+      <div class="split-media">
+        <div class="payment-list" style="max-width:460px">
+          <div class="payment-row"><div><b>Atelier Dupuis</b><br><span>FAC-2026-014 · échéance 30 j</span></div><span class="status-chip chip-wait">À venir</span></div>
+          <div class="payment-row"><div><b>Menuiserie Lefevre</b><br><span>FAC-2026-009 · échue le 12/07</span></div><span class="status-chip chip-late">En retard</span></div>
+          <div class="payment-row"><div><b>Studio Armel</b><br><span>FAC-2026-002 · 600 € / 1 200 €</span></div><span class="status-chip chip-partial">Partiellement encaissée</span></div>
+          <div class="payment-row"><div><b>Régis Delmas</b><br><span>FAC-2026-011 · réglée</span></div><span class="status-chip chip-paid">Encaissée</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="section section-alt" id="clients">
+    <div class="container split reverse reveal">
+      <div class="split-text">
+        <span class="eyebrow">Clients</span>
+        <h2>Toute la relation client, au même endroit</h2>
+        <p class="lede">Coordonnées, préférences, devis, factures, paiements, activités et notes : chaque fiche client rassemble tout l’historique de la relation.</p>
+      </div>
+      <div class="split-media">
+        <div class="client-card" style="max-width:460px">
+          <div class="client-id">
+            <div class="client-avatar">AD</div>
+            <div style="font-weight:800">Atelier Dupuis</div>
+            <div style="color:var(--body-soft);font-size:.8rem;margin-top:4px">Menuiserie · Rennes</div>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item shown"><b>Activité</b><span>Appel de qualification</span></div>
+            <div class="timeline-item shown"><b>Devis</b><span>DEV-2026-041 envoyé</span></div>
+            <div class="timeline-item shown"><b>Facture</b><span>FAC-2026-014 émise</span></div>
+            <div class="timeline-item shown"><b>Paiement</b><span>1 020 € reçu</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHATS ET FOURNISSEURS -->
+  <section class="section" id="achats-detail">
+    <div class="container split reveal">
+      <div class="split-text">
+        <span class="eyebrow">Achats</span>
+        <h2>Pilotez aussi vos achats</h2>
+        <p class="lede">Fournisseurs, commandes fournisseurs, réceptions, prix d’achat et délais : suivez votre chaîne d’approvisionnement sans quitter Piloz.</p>
+      </div>
+      <div class="split-media">
+        <div class="mini-list" style="max-width:440px">
+          <div class="row"><b>CMD-118</b> — <span>Bois &amp; Co · réception attendue le 28/07</span></div>
+          <div class="row"><b>CMD-115</b> — <span>Quincaillerie Nord · reçue</span></div>
+          <div class="row"><b>CMD-112</b> — <span>Vernis Pro · facture fournisseur en attente</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLES ET STOCK -->
+  <section class="section section-alt" id="stock-detail">
+    <div class="container split reverse reveal">
+      <div class="split-text">
+        <span class="eyebrow">Articles &amp; stock</span>
+        <h2>Votre catalogue et votre stock toujours à jour</h2>
+        <p class="lede">Articles et services, prix d’achat et de vente, marge, stock physique, stock réservé, stock disponible, inventaires et alertes de seuil.</p>
+      </div>
+      <div class="split-media">
+        <div style="max-width:440px">
+          <div class="stock-row shown" style="--fill:42%"><span>Bois massif chêne</span><div class="stock-bar"><i></i></div><span>42 %</span></div>
+          <div class="stock-row shown" style="--fill:78%"><span>Vis inox 4×30</span><div class="stock-bar"><i></i></div><span>78 %</span></div>
+          <div class="stock-row shown" style="--fill:18%"><span>Vernis mat 1 L</span><div class="stock-bar"><i></i></div><span>18 %</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TABLEAU DE BORD -->
+  <section class="section" id="dashboard-detail">
+    <div class="container split reveal">
+      <div class="split-text">
+        <span class="eyebrow">Tableau de bord</span>
+        <h2>Les informations importantes, sans surcharge</h2>
+        <p class="lede">Chiffre d’affaires, encaissé, reste à encaisser, devis en attente, factures en retard, pipeline et activités — comparés à la période précédente.</p>
+      </div>
+      <div class="split-media">
+        <div class="kpi-row" style="max-width:440px">
+          <div class="kpi-tile"><label>Chiffre d’affaires</label><b>18 450 €</b><span class="trend up">+12 %</span></div>
+          <div class="kpi-tile"><label>Encaissé</label><b>14 200 €</b><span class="trend up">+8 %</span></div>
+          <div class="kpi-tile"><label>Reste à encaisser</label><b>4 250 €</b></div>
+          <div class="kpi-tile"><label>Factures en retard</label><b>2</b><span class="trend down">-1</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODÈLES DE DOCUMENTS -->
+  <section class="section section-alt" id="modeles">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Modèles de documents</span>
+        <h2>Des documents qui ressemblent à votre entreprise</h2>
+        <p class="lede">Logo, couleurs, pied de page, coordonnées bancaires et mentions légales : choisissez le style qui correspond à votre image.</p>
+      </div>
+      <div class="center reveal">
+        <div class="doc-template-switcher" role="group" aria-label="Style du modèle">
+          <button type="button" class="is-active" data-template="classique">Classique</button>
+          <button type="button" data-template="moderne">Moderne</button>
+          <button type="button" data-template="compact">Compact</button>
+        </div>
+        <div class="doc-template-preview tpl-classique" style="max-width:460px;margin:0 auto;text-align:left">
+          <div class="tpl-head">
+            <div class="tpl-logo">P</div>
+            <div class="tpl-title mono">FACTURE FAC-2026-014</div>
+          </div>
+          <div class="tpl-lines">
+            <div class="tpl-line"><span>Prestation de conseil</span><span>850,00 €</span></div>
+            <div class="tpl-line"><span>TVA 20 %</span><span>170,00 €</span></div>
+          </div>
+          <div class="tpl-total"><span>Total TTC</span><span>1 020,00 €</span></div>
+          <div class="tpl-foot">Atelier Dupuis · IBAN FR76 •••• 1234 · Mentions légales de votre entreprise</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FONCTIONNEMENT EN TROIS ÉTAPES -->
+  <section class="section" id="comment">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Mise en route</span>
+        <h2>Opérationnel en trois étapes</h2>
+      </div>
+      <div class="steps-list reveal">
+        <div class="step-item">
+          <div><h3>Créez votre compte</h3><p>14 jours d’essai gratuit. Importez vos clients et vos articles pour démarrer sans ressaisie.</p></div>
+        </div>
+        <div class="step-item">
+          <div><h3>Centralisez votre activité</h3><p>Prospects, devis, factures, paiements, achats et stock : configurez votre catalogue et vos modèles de documents.</p></div>
+        </div>
+        <div class="step-item">
+          <div><h3>Suivez tout depuis Piloz</h3><p>Pilotez votre pipeline, vos encaissements et votre stock depuis un tableau de bord unique, mis à jour en continu.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFILS CONCERNÉS -->
+  <section class="section section-alt" id="solutions">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Pour qui</span>
+        <h2>Conçu pour les entreprises qui veulent avancer simplement</h2>
+      </div>
+      <div class="grid-auto reveal-stagger">
+        <div class="persona-card">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 21c1.2-4.6 4.8-6.8 7-6.8s5.8 2.2 7 6.8"/></svg></div>
+          Indépendants
+        </div>
+        <div class="persona-card">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a2 2 0 0 1 2.8 2.8l-8.5 8.5-3.7.9.9-3.7z"/></svg></div>
+          Artisans
+        </div>
+        <div class="persona-card">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="1.6"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+          Prestataires de services
+        </div>
+        <div class="persona-card">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l8-6 8 6v12"/><path d="M9 21v-6h6v6"/></svg></div>
+          TPE
+        </div>
+        <div class="persona-card">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="9" r="3"/><path d="M2 20c.8-3.4 3.2-5 6-5s5.2 1.6 6 5"/><path d="M12 20c.6-2.7 2.5-4 5-4s4.4 1.3 5 4"/></svg></div>
+          Petites équipes commerciales
+        </div>
+        <div class="persona-card">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4z"/><path d="M3 7v10l9 4 9-4V7"/></svg></div>
+          Entreprises avec gestion de stock
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARIFS -->
+  <section class="section" id="tarifs">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Tarifs</span>
+        <h2>Trois offres, un essai gratuit de 14 jours</h2>
+        <p class="lede">Changez ou arrêtez quand vous voulez.</p>
+      </div>
+
+      <div class="center">
+        <div class="pricing-toggle" role="group" aria-label="Fréquence de facturation">
+          <button type="button" class="is-active" data-period="monthly">Mensuel</button>
+          <button type="button" data-period="yearly">Annuel</button>
+        </div>
+        <p class="pricing-save" id="pricing-save" aria-live="polite"></p>
+      </div>
+
+      <div class="pricing-grid" id="pricing-grid"><!-- généré par pricing.js --></div>
+
+      <p class="custom-plan">Plus de 15 utilisateurs ou un besoin particulier ? <a href="mailto:quentinjernot@outlook.com">Parlons-en</a>.</p>
+
+      <!-- COMPARATEUR -->
+      <div class="comparator">
+        <details class="center">
+          <summary class="comparator-toggle">Comparer toutes les fonctionnalités</summary>
+
+          <div style="overflow-x:auto">
+            <table class="comparator-table">
+              <thead>
+                <tr>
+                  <th>Fonctionnalité</th>
+                  <th>Essentiel <span data-plan-price="essential" class="mono" style="display:block;font-weight:600;font-size:.72rem;color:var(--body-soft)"></span></th>
+                  <th>Pro <span data-plan-price="pro" class="mono" style="display:block;font-weight:600;font-size:.72rem;color:var(--body-soft)"></span></th>
+                  <th>Business <span data-plan-price="business" class="mono" style="display:block;font-weight:600;font-size:.72rem;color:var(--body-soft)"></span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="cat" colspan="4">Utilisateurs</td></tr>
+                <tr><td>Nombre d’utilisateurs</td><td>1</td><td>5</td><td>15</td></tr>
+
+                <tr><td class="cat" colspan="4">Suivi commercial</td></tr>
+                <tr><td>Pipeline commercial</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                <tr><td>Automatisations du pipeline</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                <tr><td>Notifications collaboratives</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+
+                <tr><td class="cat" colspan="4">Devis</td></tr>
+                <tr><td>Devis</td><td class="yes">Illimité</td><td class="yes">Illimité</td><td class="yes">Illimité</td></tr>
+                <tr><td>Modèles personnalisables</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+
+                <tr><td class="cat" colspan="4">Factures</td></tr>
+                <tr><td>Factures et avoirs</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                <tr><td>Acompte, situation, solde</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+
+                <tr><td class="cat" colspan="4">Paiements</td></tr>
+                <tr><td>Suivi des paiements et échéances</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                <tr><td>Export PDF et CSV</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+
+                <tr><td class="cat" colspan="4">Achats</td></tr>
+                <tr><td>Fournisseurs et commandes fournisseurs</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+
+                <tr><td class="cat" colspan="4">Stock</td></tr>
+                <tr><td>Gestion de stock et inventaires</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                <tr><td>Plusieurs entrepôts</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="yes">✓</td></tr>
+
+                <tr><td class="cat" colspan="4">Modèles</td></tr>
+                <tr><td>Modèles de documents</td><td>Standards</td><td>Personnalisables</td><td>Personnalisables</td></tr>
+                <tr><td>Plusieurs grilles tarifaires</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="yes">✓</td></tr>
+
+                <tr><td class="cat" colspan="4">Rapports</td></tr>
+                <tr><td>Tableau de bord</td><td>Essentiel</td><td>Avancé</td><td>Avancé</td></tr>
+                <tr><td>Rapports de marge</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                <tr><td>Rapports personnalisés</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="yes">✓</td></tr>
+
+                <tr><td class="cat" colspan="4">Permissions</td></tr>
+                <tr><td>Rôles et permissions</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="yes">Avancés</td></tr>
+                <tr><td>Processus de validation interne</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="yes">✓</td></tr>
+
+                <tr><td class="cat" colspan="4">Support</td></tr>
+                <tr><td>Support</td><td>E-mail</td><td>Prioritaire</td><td>Prioritaire renforcé</td></tr>
+                <tr><td>Accompagnement au déploiement</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="yes">✓</td></tr>
+                <tr><td>Accès API</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td>Lorsqu’il sera disponible</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="comparator-accordion">
+            <details class="compare-card"><summary>Utilisateurs<span>1 · 5 · 15</span></summary>
+              <div class="compare-rows"><div class="compare-row"><span>Nombre d’utilisateurs</span><span>1 · 5 · 15</span></div></div>
+            </details>
+            <details class="compare-card"><summary>Suivi commercial</summary>
+              <div class="compare-rows">
+                <div class="compare-row"><span>Pipeline commercial</span><span>✓ · ✓ · ✓</span></div>
+                <div class="compare-row"><span>Automatisations</span><span>Non · ✓ · ✓</span></div>
+                <div class="compare-row"><span>Notifications collaboratives</span><span>Non · ✓ · ✓</span></div>
+              </div>
+            </details>
+            <details class="compare-card"><summary>Devis &amp; factures</summary>
+              <div class="compare-rows">
+                <div class="compare-row"><span>Devis illimités</span><span>✓ · ✓ · ✓</span></div>
+                <div class="compare-row"><span>Modèles personnalisables</span><span>Non · ✓ · ✓</span></div>
+                <div class="compare-row"><span>Acompte / situation / solde</span><span>Non · ✓ · ✓</span></div>
+              </div>
+            </details>
+            <details class="compare-card"><summary>Achats &amp; stock</summary>
+              <div class="compare-rows">
+                <div class="compare-row"><span>Fournisseurs et commandes</span><span>Non · ✓ · ✓</span></div>
+                <div class="compare-row"><span>Gestion de stock</span><span>Non · ✓ · ✓</span></div>
+                <div class="compare-row"><span>Plusieurs entrepôts</span><span>Non · Non · ✓</span></div>
+              </div>
+            </details>
+            <details class="compare-card"><summary>Rapports &amp; permissions</summary>
+              <div class="compare-rows">
+                <div class="compare-row"><span>Tableau de bord</span><span>Essentiel · Avancé · Avancé</span></div>
+                <div class="compare-row"><span>Rapports de marge</span><span>Non · ✓ · ✓</span></div>
+                <div class="compare-row"><span>Rôles et permissions</span><span>Non · Non · Avancés</span></div>
+              </div>
+            </details>
+            <details class="compare-card"><summary>Support</summary>
+              <div class="compare-rows">
+                <div class="compare-row"><span>Niveau de support</span><span>E-mail · Prioritaire · Renforcé</span></div>
+                <div class="compare-row"><span>Accompagnement déploiement</span><span>Non · Non · ✓</span></div>
+              </div>
+            </details>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- SÉCURITÉ ET DONNÉES -->
+  <section class="section section-alt" id="securite">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Sécurité</span>
+        <h2>Vos données, protégées et cloisonnées</h2>
+      </div>
+      <div class="security-list reveal-stagger">
+        <div class="security-item">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+          <div><h3>Connexion sécurisée</h3><p>L’accès à votre compte est protégé et chaque session est authentifiée.</p></div>
+        </div>
+        <div class="security-item">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7z"/></svg></div>
+          <div><h3>Données cloisonnées</h3><p>Chaque entreprise dispose de son propre espace, séparé des autres comptes.</p></div>
+        </div>
+        <div class="security-item">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="7" r="2.4"/><path d="M3 20c.7-3 3-4.6 6-4.6s5.3 1.6 6 4.6"/><path d="M15.5 15.6c2.2.3 3.8 1.8 4.5 4.4"/></svg></div>
+          <div><h3>Rôles selon l’offre</h3><p>La gestion des rôles et permissions s’adapte à la taille de votre équipe.</p></div>
+        </div>
+        <div class="security-item">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4 4 0 0 1-1-7.9A5 5 0 0 1 15.5 8 4.5 4.5 0 0 1 17 17"/></svg></div>
+          <div><h3>Hébergement Supabase</h3><p>Vos informations sont enregistrées dans une base de données Supabase.</p></div>
+        </div>
+        <div class="security-item">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></div>
+          <div><h3>Accès protégé</h3><p>Seuls les utilisateurs autorisés de votre entreprise accèdent à vos données.</p></div>
+        </div>
+        <div class="security-item">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="M7 11l5 5 5-5"/><path d="M4 21h16"/></svg></div>
+          <div><h3>Export de vos données</h3><p>Exportez vos clients, devis et factures en PDF ou CSV à tout moment.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Questions fréquentes</span>
+        <h2>Tout ce qu’il faut savoir avant de démarrer</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Combien de temps dure l’essai ?</summary>
+          <p class="faq-a">L’essai gratuit dure 14 jours, sans engagement, avec accès à l’ensemble des fonctionnalités de l’offre choisie.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Dois-je installer Piloz ?</summary>
+          <p class="faq-a">Non, Piloz fonctionne directement dans votre navigateur, sans installation, sur ordinateur, tablette ou mobile.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Mes données sont-elles séparées de celles des autres entreprises ?</summary>
+          <p class="faq-a">Oui, chaque entreprise dispose de son propre espace : vos clients, devis, factures et documents ne sont jamais mélangés avec ceux d’un autre compte.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Puis-je créer des devis et factures personnalisés ?</summary>
+          <p class="faq-a">Oui, avec votre logo, vos couleurs, votre pied de page et vos coordonnées bancaires selon l’offre choisie.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Puis-je suivre les factures impayées ?</summary>
+          <p class="faq-a">Oui, Piloz distingue les factures à venir, en retard, partiellement encaissées et encaissées.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Piloz gère-t-il les achats et le stock ?</summary>
+          <p class="faq-a">Oui à partir de l’offre Pro : fournisseurs, commandes fournisseurs, réceptions et suivi de stock.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Puis-je ajouter plusieurs utilisateurs ?</summary>
+          <p class="faq-a">Oui, à partir de l’offre Pro, jusqu’à 5 utilisateurs, et jusqu’à 15 utilisateurs avec l’offre Business.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Puis-je changer d’offre ?</summary>
+          <p class="faq-a">Oui, vous pouvez changer d’offre à tout moment depuis votre compte.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Puis-je importer mes clients et articles ?</summary>
+          <p class="faq-a">Oui, vous pouvez importer vos clients et vos articles pour démarrer sans ressaisie.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Piloz remplace-t-il mon expert-comptable ?</summary>
+          <p class="faq-a">Piloz facilite la gestion commerciale et la préparation des données, mais ne remplace pas l’accompagnement comptable ou juridique d’un professionnel.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="section" id="essai">
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2>Votre activité commerciale mérite mieux qu’un empilement de fichiers</h2>
+        <p>Centralisez vos prospects, vos devis, vos factures, vos paiements, vos achats et votre stock dans Piloz.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://app.piloz.fr/?mode=signup">Essayer Piloz gratuitement</a>
+        </div>
+        <span class="hero-meta">14 jours d’essai gratuit · Sans engagement</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="#hero" style="color:#fff"><img src="assets/images/brand-mark.png" alt="" class="brand-icon">Piloz</a>
+        <p>La gestion commerciale des indépendants, artisans, TPE et PME : du premier contact jusqu’à l’encaissement.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Produit</h4>
+        <a href="#fonctionnalites">Fonctionnalités</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="https://app.piloz.fr/?mode=login">Connexion</a>
+        <a href="https://app.piloz.fr/?mode=signup">Essai gratuit</a>
+      </div>
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <a href="#solutions">Indépendants</a>
+        <a href="#solutions">Artisans</a>
+        <a href="#solutions">TPE</a>
+        <a href="#solutions">Gestion commerciale</a>
+      </div>
+      <div class="footer-col">
+        <h4>Ressources</h4>
+        <a href="#faq">FAQ</a>
+        <a href="legal/centre-aide.html">Centre d’aide</a>
+        <a href="mailto:quentinjernot@outlook.com">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <a href="legal/mentions-legales.html">Mentions légales</a>
+        <a href="legal/cgu.html">Conditions générales d’utilisation</a>
+        <a href="legal/confidentialite.html">Politique de confidentialité</a>
+        <a href="legal/cookies.html">Gestion des cookies</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Piloz — piloz.fr</span>
     </div>
   </div>
-</div></header>
+</footer>
 
-<section id="fonctions"><div class="wrap">
-  <div class="sect-t"><h2>Tout votre commercial, au même endroit</h2>
-  <p>Pensé pour ceux qui vendent ET livrent : zéro usine à gaz, que l'essentiel, bien fait.</p></div>
-  <div class="grid3">
-    <div class="feat"><span class="ico">🔥</span><h3>Relances intelligentes</h3><p>Chaque devis programme sa relance automatiquement. Après un appel, dites simplement le résultat (répondeur, discussion, très positif…) : Piloz replanifie la suite selon votre cadence.</p></div>
-    <div class="feat"><span class="ico">▦</span><h3>Pipeline visuel</h3><p>Glissez-déposez vos dossiers de « Prospection » à « Signé » comme sur un tableau blanc. Montants, alertes et totaux par colonne, en temps réel.</p></div>
-    <div class="feat"><span class="ico">🧾</span><h3>Devis & factures</h3><p>Créez des devis et factures professionnels, transformez un devis accepté en facture en un clic, suivez les paiements et les retards, exportez vos écritures pour votre comptable.</p></div>
-    <div class="feat"><span class="ico">👤</span><h3>Fiches clients 360°</h3><p>Toute l'histoire de chaque client : dossiers, montants signés, timeline complète des échanges, pièces jointes, notes — même dictées à la voix.</p></div>
-    <div class="feat"><span class="ico">🗓</span><h3>Rapport hebdo automatique</h3><p>Chaque lundi, votre semaine est déjà écrite : relances passées, devis envoyés, signatures, comparées à la semaine précédente. Export PDF en deux clics.</p></div>
-    <div class="feat"><span class="ico">☁️</span><h3>Partout, en sécurité</h3><p>Vos données chiffrées et synchronisées sur tous vos appareils, verrouillées par code PIN, avec sauvegarde automatique quotidienne et restauration en un clic.</p></div>
-  </div>
-</div></section>
-
-<section id="comment" style="background:#fff"><div class="wrap">
-  <div class="sect-t"><h2>Opérationnel en 5 minutes</h2></div>
-  <div class="etapes" style="max-width:720px;margin:0 auto">
-    <div class="etape"><div><h3>Créez votre compte</h3><p>14 jours d'essai gratuit, sans carte bancaire. Importez vos clients depuis Excel si vous en avez.</p></div></div>
-    <div class="etape"><div><h3>Saisissez vos devis en cours</h3><p>Client, montant, date — Piloz planifie immédiatement la première relance et prend le relais.</p></div></div>
-    <div class="etape"><div><h3>Ouvrez l'app chaque matin</h3><p>Vos relances du jour vous attendent, avec le téléphone et l'historique de chaque prospect. Appelez, notez le résultat, passez au suivant.</p></div></div>
-    <div class="etape"><div><h3>Signez, facturez, encaissez</h3><p>Devis accepté → facture en un clic → suivi du paiement → export comptable. La boucle est bouclée.</p></div></div>
-  </div>
-</div></section>
-
-<section id="tarifs"><div class="wrap">
-  <div class="sect-t"><h2>Un tarif simple, sans surprise</h2><p>Changez ou arrêtez quand vous voulez. Vos données restent exportables à tout moment.</p></div>
-  <div class="prix">
-    <div class="plan">
-      <h3>Découverte</h3>
-      <div class="tarif">0 € <small>/ 14 jours</small></div>
-      <ul><li>Toutes les fonctionnalités</li><li>Sans carte bancaire</li><li>Import de vos clients</li><li>Support par email</li></ul>
-      <a class="btn btn-o" style="text-align:center" href="https://app.piloz.fr/?mode=signup">Essayer gratuitement</a>
-    </div>
-    <div class="plan star">
-      <h3>Solo</h3>
-      <div class="tarif">19 € <small>HT / mois</small></div>
-      <ul><li>CRM + relances illimités</li><li>Devis & factures illimités</li><li>Export comptable</li><li>Pièces jointes 1 Go</li><li>Sauvegardes & restauration</li><li>Support prioritaire</li></ul>
-      <a class="btn btn-p" style="text-align:center" href="https://app.piloz.fr/?mode=signup">Choisir Solo</a>
-    </div>
-    <div class="plan">
-      <h3>Annuel</h3>
-      <div class="tarif">190 € <small>HT / an</small></div>
-      <ul><li>Tout le plan Solo</li><li>2 mois offerts</li><li>Accompagnement à la prise en main</li></ul>
-      <a class="btn btn-o" style="text-align:center" href="https://app.piloz.fr/?mode=signup">Choisir Annuel</a>
-    </div>
-  </div>
-</div></section>
-
-<section id="faq" style="background:#fff"><div class="wrap" style="max-width:720px">
-  <div class="sect-t"><h2>Questions fréquentes</h2></div>
-  <details><summary>Mes données sont-elles en sécurité ?</summary><p>Oui. Chaque compte est totalement cloisonné dans une base sécurisée : personne d'autre que vous ne peut accéder à vos clients, dossiers ou factures. Un code PIN protège en plus chaque ouverture de l'application, et une sauvegarde automatique quotidienne (14 jours d'historique) permet de restaurer vos données à tout moment.</p></details>
-  <details><summary>Que se passe-t-il à la fin de l'essai gratuit ?</summary><p>Votre accès se met simplement en pause — rien n'est effacé. Activez votre abonnement pour reprendre exactement là où vous en étiez, ou demandez l'export de vos données.</p></details>
-  <details><summary>Mes factures sont-elles conformes ?</summary><p>Piloz génère des documents numérotés avec vos mentions légales, votre SIRET, la TVA et un export des écritures pour votre comptable. Vous restez responsable du paramétrage adapté à votre régime (TVA, franchise en base…) — au moindre doute, votre expert-comptable valide en deux minutes.</p></details>
-  <details><summary>Puis-je importer mes clients existants ?</summary><p>Oui, depuis un fichier Excel ou CSV, avec reconnaissance des colonnes. Et vous exportez tout (clients, dossiers, factures) en CSV quand vous voulez : vos données vous appartiennent.</p></details>
-  <details><summary>Ça marche sur mobile ?</summary><p>Oui, l'application fonctionne dans le navigateur de votre téléphone comme de votre ordinateur, avec la même synchronisation.</p></details>
-</div></section>
-
-<section style="text-align:center;padding:66px 0">
-  <div class="wrap">
-    <h2 style="font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:900;letter-spacing:-.02em">Vos prospects n'attendront pas.<br>Vos relances non plus.</h2>
-    <div class="btns" style="margin-top:26px"><a class="btn btn-p" href="https://app.piloz.fr/?mode=signup">Démarrer mon essai gratuit de 14 jours</a></div>
-  </div>
-</section>
-
-<footer><div class="wrap">
-  <div><b style="color:#fff">Piloz</b><br>Le copilote commercial des indépendants et TPE.</div>
-  <div>Contact : <a href="mailto:quentinjernot@outlook.com">quentinjernot@outlook.com</a><br><span style="font-size:.78rem">© 2026 Piloz — piloz.fr — Tous droits réservés</span></div>
-</div></footer>
-
+<script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
