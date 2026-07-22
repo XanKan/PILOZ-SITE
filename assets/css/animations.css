@@ -18,36 +18,12 @@
 .reveal-stagger.is-visible > *:nth-child(5){transition-delay:.33s}
 .reveal-stagger.is-visible > *:nth-child(6){transition-delay:.4s}
 
-/* ===== Hero : entrée du cadre produit ===== */
+/* ===== Entrée du cadre produit ===== */
 .device-wrap{
   opacity:0;transform:translateY(50px) rotateX(6deg);
   transition:opacity 1s var(--ease),transform 1s var(--ease);
 }
 .device-wrap.is-visible{opacity:1;transform:translateY(0) rotateX(0)}
-
-/* ===== Scrollytelling produit ===== */
-.split-story{position:relative}
-.story-steps{display:flex;flex-direction:column;gap:0}
-.story-step{
-  min-height:64vh;display:flex;flex-direction:column;justify-content:center;
-  padding:40px 0;opacity:.35;transition:opacity .5s var(--ease);
-}
-.story-step.is-current{opacity:1}
-.story-step .eyebrow{margin-bottom:14px}
-.story-step h3{font-size:clamp(1.3rem,2.6vw,1.7rem);margin-bottom:12px}
-.story-step p{font-size:.98rem}
-.story-stage{position:sticky;top:104px;align-self:start}
-
-@media (max-width:900px){
-  .split-story{display:flex;flex-direction:column}
-  .story-stage{order:-1;position:sticky;top:76px;margin-bottom:20px;max-height:min(60vh,420px)}
-  .story-stage .device-frame{max-height:min(60vh,420px)}
-  .story-stage .device-screen,.story-stage .app-shell{min-height:min(52vh,360px)}
-  .story-step{min-height:auto;padding:22px 0;opacity:1}
-}
-
-/* ===== Pastilles / compteurs ===== */
-.count-up{font-variant-numeric:tabular-nums}
 
 /* ===== Réduction de mouvement ===== */
 @media (prefers-reduced-motion:reduce){
@@ -58,6 +34,4 @@
     scroll-behavior:auto !important;
   }
   .reveal,.reveal-stagger > *,.device-wrap{opacity:1;transform:none}
-  .story-step{opacity:1}
-  .story-stage{position:static}
 }

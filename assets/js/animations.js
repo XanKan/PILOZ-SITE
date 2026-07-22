@@ -24,23 +24,3 @@ export function initScrollReveal() {
 
   targets.forEach((el) => observer.observe(el));
 }
-
-// Petit compteur numérique utilisé par les tuiles KPI du tableau de bord.
-export function animateCount(el, endValue, { duration = 900, prefix = '', suffix = '' } = {}) {
-  if (reduceMotion) {
-    el.textContent = `${prefix}${endValue}${suffix}`;
-    return;
-  }
-  const start = performance.now();
-  const from = 0;
-  function tick(now) {
-    const progress = Math.min((now - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    const value = Math.round(from + (endValue - from) * eased);
-    el.textContent = `${prefix}${value.toLocaleString('fr-FR')}${suffix}`;
-    if (progress < 1) requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
-}
-
-export const prefersReducedMotion = reduceMotion;
