@@ -1,47 +1,43 @@
-/* Design tokens — identité Piloz : turquoise & bleu marine, lumineuse, premium */
+/* Design tokens — identité Piloz : thème sombre, futuriste, accents lumineux */
 :root{
   /* Couleurs de marque (issues du logo Piloz) */
   --primary:#14B8AA;
-  --primary-2:#0C9488;
-  --primary-light:#E3FBF6;
-  --primary-mid:#8FE9D9;
+  --primary-2:#2DE0CC;
+  --primary-light:rgba(20,184,170,.14);
+  --primary-mid:#5EEAD4;
 
   /* Accent chaud (variété, distinction) */
   --accent:#FF6B4A;
-  --accent-2:#E85436;
-  --accent-light:#FFEEE9;
+  --accent-2:#FF8C6E;
+  --accent-light:rgba(255,107,74,.14);
 
-  /* Neutres — contraste marqué (encre proche du noir, texte plus sombre) */
-  --ink:#0A1220;
-  --ink-soft:#2B3648;
-  --body:#42495A;
-  --body-soft:#767F91;
-  --paper:#FFFFFF;
-  --paper-alt:#F5F6F8;
-  --paper-tint:#EEFAF7;
-  --border:#E1E4EA;
-  --border-soft:#ECEEF2;
+  /* Neutres — thème sombre */
+  --ink:#F4F6FB;
+  --ink-soft:#C7D0E0;
+  --body:#93A0B8;
+  --body-soft:#5E6A82;
+  --paper:#070B14;
+  --paper-alt:#0D1420;
+  --paper-tint:#0A1B1C;
+  --border:rgba(255,255,255,.1);
+  --border-soft:rgba(255,255,255,.06);
 
   /* États */
-  --success:#18864B;
-  --success-light:#E7F6ED;
-  --warning:#B96A06;
-  --warning-light:#FBF0DD;
-  --danger:#C0362C;
-  --danger-light:#FBEAE8;
+  --success:#22C55E;
+  --success-light:rgba(34,197,94,.14);
+  --warning:#F5A623;
+  --warning-light:rgba(245,166,35,.14);
+  --danger:#F0544A;
+  --danger-light:rgba(240,84,74,.14);
 
-  /* Fond sombre (panneaux produit, footer) — bleu marine du logo */
-  --deep:#0E1B30;
-  --deep-2:#152944;
-  --deep-3:#1B3556;
-  --deep-border:#2A4568;
-  --deep-text:#A7B7CE;
+  /* Void — panneaux les plus profonds (CTA, offre mise en avant) */
+  --deep:#020408;
 
   /* Typo */
   --font-sans:'Albert Sans',system-ui,sans-serif;
   --font-mono:'Spline Sans Mono',ui-monospace,monospace;
 
-  /* Rayons — plus architecturés, moins "pilule SaaS" */
+  /* Rayons — architecturés, peu de pilules */
   --r-sm:6px;
   --r-md:10px;
   --r-lg:14px;
@@ -49,10 +45,10 @@
   --r-full:999px;
 
   /* Ombres */
-  --shadow-sm:0 2px 8px rgba(14,27,48,.05);
-  --shadow-md:0 12px 30px rgba(14,27,48,.08);
-  --shadow-lg:0 24px 60px rgba(14,27,48,.12);
-  --shadow-brand:0 16px 40px rgba(20,184,170,.28);
+  --shadow-sm:0 2px 10px rgba(0,0,0,.35);
+  --shadow-md:0 14px 34px rgba(0,0,0,.45);
+  --shadow-lg:0 28px 70px rgba(0,0,0,.55);
+  --shadow-brand:0 0 32px rgba(20,184,170,.35);
 
   /* Rythme */
   --container:1200px;
@@ -69,4 +65,15 @@
 
   --z-nav:100;
   --z-overlay:200;
+}
+
+/* Le cadre produit conserve la palette claire de l'application réelle,
+   comme un écran lumineux posé sur la page sombre. */
+.device-screen{
+  --paper:#FFFFFF;--paper-alt:#F5F6F8;--paper-tint:#EEFAF7;
+  --ink:#0A1220;--ink-soft:#2B3648;
+  --body:#42495A;--body-soft:#767F91;
+  --border:#E1E4EA;--border-soft:#ECEEF2;
+  --primary-light:#E3FBF6;--accent-light:#FFEEE9;
+  --success-light:#E7F6ED;--warning-light:#FBF0DD;
 }

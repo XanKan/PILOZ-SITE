@@ -23,12 +23,12 @@
 .site-nav{
   position:fixed;top:0;left:0;right:0;z-index:var(--z-nav);
   padding:16px 0;
-  background:rgba(255,255,255,.7);
+  background:rgba(7,11,20,.55);
   border-bottom:1px solid transparent;
   transition:background var(--dur-fast) var(--ease),border-color var(--dur-fast) var(--ease),padding var(--dur-fast) var(--ease),backdrop-filter var(--dur-fast) var(--ease);
 }
 .site-nav.is-scrolled{
-  background:rgba(255,255,255,.92);
+  background:rgba(7,11,20,.85);
   backdrop-filter:blur(14px) saturate(160%);
   -webkit-backdrop-filter:blur(14px) saturate(160%);
   border-bottom-color:var(--border);
@@ -205,10 +205,14 @@
 
 /* ===== Cartes de fonctionnalités ===== */
 .feature-card{
-  background:var(--paper);border:1px solid var(--border);border-radius:var(--r-lg);
-  padding:28px;transition:transform var(--dur-fast) var(--ease),box-shadow var(--dur-fast) var(--ease),border-color var(--dur-fast);
+  background:rgba(255,255,255,.025);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border:1px solid var(--border);border-radius:var(--r-lg);
+  padding:28px;transition:transform var(--dur-fast) var(--ease),box-shadow var(--dur-fast) var(--ease),border-color var(--dur-fast),background var(--dur-fast);
 }
-.feature-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm);border-color:var(--ink-soft)}
+.feature-card:hover{
+  transform:translateY(-3px);background:rgba(255,255,255,.045);
+  border-color:rgba(20,184,170,.4);box-shadow:0 0 30px rgba(20,184,170,.12);
+}
 .feature-icon{
   width:46px;height:46px;border-radius:var(--r-sm);
   background:var(--primary-light);color:var(--primary-2);
@@ -220,10 +224,13 @@
 
 /* ===== Personas ===== */
 .persona-card{
-  background:var(--paper);border:1px solid var(--border);border-radius:var(--r-md);
+  background:rgba(255,255,255,.025);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border:1px solid var(--border);border-radius:var(--r-md);
   padding:20px;text-align:center;font-weight:700;font-size:.94rem;color:var(--ink-soft);
   display:flex;flex-direction:column;align-items:center;gap:10px;
+  transition:border-color var(--dur-fast) var(--ease);
 }
+.persona-card:hover{border-color:rgba(20,184,170,.4)}
 .persona-card .feature-icon{margin-bottom:0}
 
 /* ===== Tarifs ===== */
@@ -235,7 +242,7 @@
   padding:9px 22px;border-radius:var(--r-full);font-weight:700;font-size:.9rem;
   color:var(--body);transition:background var(--dur-fast),color var(--dur-fast);
 }
-.pricing-toggle button.is-active{background:var(--ink);color:#fff}
+.pricing-toggle button.is-active{background:var(--primary);color:#fff}
 .pricing-save{font-size:.82rem;color:var(--success);font-weight:700;text-align:center;margin-bottom:36px;min-height:1.2em}
 
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
@@ -244,7 +251,8 @@
   padding:32px;display:flex;flex-direction:column;position:relative;
 }
 .plan-card.is-featured{
-  background:var(--ink);border-color:var(--ink);color:#fff;
+  background:var(--deep);border-color:var(--primary);color:#fff;
+  box-shadow:0 0 40px rgba(20,184,170,.18);
 }
 .plan-card.is-featured .plan-name,
 .plan-card.is-featured .plan-price{color:#fff}
@@ -314,7 +322,7 @@
 }
 .comparator-toggle:hover{border-color:var(--primary);box-shadow:var(--shadow-sm)}
 .comparator-details[open] .comparator-toggle::after{transform:rotate(-135deg);margin-top:3px}
-.comparator-table{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-sm)}
+.comparator-table{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden}
 .comparator-table th,.comparator-table td{padding:13px 16px;text-align:left;font-size:.86rem;border-bottom:1px solid var(--border-soft)}
 .comparator-table thead th{background:var(--paper-alt);font-weight:800;color:var(--ink)}
 .comparator-table td.cat{font-weight:800;background:var(--paper-alt);color:var(--ink-soft);font-size:.72rem;text-transform:uppercase;letter-spacing:.04em}
@@ -326,7 +334,7 @@
 @media (max-width:820px){
   .comparator-table{display:none}
   .comparator-accordion{display:block}
-  .compare-card{background:#fff;border:1px solid var(--border);border-radius:var(--r-md);margin-bottom:10px;overflow:hidden}
+  .compare-card{background:var(--paper-alt);border:1px solid var(--border);border-radius:var(--r-md);margin-bottom:10px;overflow:hidden}
   .compare-card summary{padding:16px 18px;font-weight:800;display:flex;justify-content:space-between;align-items:center;cursor:pointer;list-style:none}
   .compare-card summary::-webkit-details-marker{display:none}
   .compare-card .compare-rows{padding:0 18px 16px}
@@ -335,7 +343,7 @@
 
 /* ===== FAQ ===== */
 .faq-list{max-width:760px;margin:0 auto}
-.faq-item{background:var(--paper);border:1px solid var(--border);border-radius:var(--r-md);margin-bottom:10px;overflow:hidden}
+.faq-item{background:rgba(255,255,255,.025);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--border);border-radius:var(--r-md);margin-bottom:10px;overflow:hidden}
 .faq-item summary{
   padding:18px 22px;font-weight:700;cursor:pointer;list-style:none;
   display:flex;justify-content:space-between;align-items:center;gap:16px;
@@ -350,14 +358,14 @@
 
 /* ===== Sécurité ===== */
 .security-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:820px;margin:0 auto}
-.security-item{display:flex;gap:14px;align-items:flex-start;padding:18px;background:var(--paper);border:1px solid var(--border);border-radius:var(--r-md)}
+.security-item{display:flex;gap:14px;align-items:flex-start;padding:18px;background:rgba(255,255,255,.025);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--border);border-radius:var(--r-md)}
 .security-item .feature-icon{margin-bottom:0;flex-shrink:0}
 .security-item h3{font-size:.96rem;margin-bottom:4px}
 .security-item p{font-size:.86rem}
 
 /* ===== CTA final ===== */
 .cta-band{
-  background:var(--ink);
+  background:var(--deep);border:1px solid var(--border);
   border-radius:var(--r-xl);padding:clamp(48px,8vw,80px) clamp(24px,6vw,60px);
   text-align:center;color:#fff;margin:0 var(--gutter);
   position:relative;overflow:hidden;
