@@ -84,31 +84,41 @@
   <section class="section">
     <div class="container">
       <div class="contact-layout reveal">
-        <form id="contact-form" class="contact-form" action="https://formsubmit.co/ajax/erp-piloz@outlook.com" method="POST" novalidate>
-          <input type="hidden" name="_subject" value="Nouveau message depuis piloz.fr">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-
-          <div class="form-row">
-            <label for="cf-name">Nom</label>
-            <input id="cf-name" name="Nom" type="text" required autocomplete="name">
-          </div>
-          <div class="form-row">
-            <label for="cf-email">E-mail</label>
-            <input id="cf-email" name="Email" type="email" required autocomplete="email">
-          </div>
-          <div class="form-row">
-            <label for="cf-company">Entreprise <span>(optionnel)</span></label>
-            <input id="cf-company" name="Entreprise" type="text" autocomplete="organization">
-          </div>
-          <div class="form-row">
-            <label for="cf-message">Message</label>
-            <textarea id="cf-message" name="Message" required></textarea>
+        <div>
+          <div class="form-success" id="contact-success" hidden>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>
+            <div>
+              <h3>Message envoyé avec succès</h3>
+              <p>Nous vous répondrons sous 48 à 72h à l’adresse indiquée.</p>
+            </div>
           </div>
 
-          <button class="btn btn-primary btn-block" type="submit">Envoyer le message</button>
-          <p class="form-status" id="contact-status" aria-live="polite"></p>
-        </form>
+          <form id="contact-form" class="contact-form" action="https://formsubmit.co/ajax/erp-piloz@outlook.com" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="Nouveau message depuis piloz.fr">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="form-row">
+              <label for="cf-name">Nom</label>
+              <input id="cf-name" name="Nom" type="text" required autocomplete="name">
+            </div>
+            <div class="form-row">
+              <label for="cf-email">E-mail</label>
+              <input id="cf-email" name="Email" type="email" required autocomplete="email">
+            </div>
+            <div class="form-row">
+              <label for="cf-company">Entreprise <span>(optionnel)</span></label>
+              <input id="cf-company" name="Entreprise" type="text" autocomplete="organization">
+            </div>
+            <div class="form-row">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="Message" required></textarea>
+            </div>
+
+            <button class="btn btn-primary btn-block" type="submit">Envoyer le message</button>
+            <p class="form-status" id="contact-status" aria-live="polite"></p>
+          </form>
+        </div>
 
         <div class="contact-side">
           <div class="contact-card">
@@ -121,7 +131,7 @@
           </div>
           <div class="contact-card">
             <h3>Délai de réponse</h3>
-            <p>Nous répondons généralement sous 24 à 48h ouvrées.</p>
+            <p>Nous répondons sous 48 à 72h ouvrées.</p>
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@ export function initContactForm() {
   if (!form) return;
 
   const status = document.getElementById('contact-status');
+  const success = document.getElementById('contact-success');
   const submitBtn = form.querySelector('button[type="submit"]');
 
   form.addEventListener('submit', async (event) => {
@@ -12,7 +13,7 @@ export function initContactForm() {
     submitBtn.disabled = true;
     submitBtn.textContent = 'Envoi en cours…';
     status.textContent = '';
-    status.classList.remove('is-success', 'is-error');
+    status.classList.remove('is-error');
 
     try {
       const response = await fetch(form.action, {
@@ -24,9 +25,10 @@ export function initContactForm() {
       if (!response.ok) throw new Error('request failed');
 
       form.reset();
-      form.classList.add('is-sent');
-      status.textContent = 'Message envoyé. Nous vous répondrons rapidement à l’adresse indiquée.';
-      status.classList.add('is-success');
+      form.hidden = true;
+      if (success) success.hidden = false;
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Envoyer le message';
     } catch (err) {
       status.textContent = 'Une erreur est survenue. Vous pouvez aussi nous écrire directement à erp-piloz@outlook.com.';
       status.classList.add('is-error');
