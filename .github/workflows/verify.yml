@@ -25,5 +25,8 @@ jobs:
           grep -nE 'billing.*annual|billing.*monthly|checkout\.html' assets/js/config.js assets/js/pricing.js
       - name: Tester le sélecteur tarifaire
         run: |
-          output=$(google-chrome --headless --no-sandbox --disable-gpu --virtual-time-budget=5000 --user-data-dir="$RUNNER_TEMP/chrome-pricing" --dump-dom "file://$PWD/tests/pricing-links.html")
+          python3 -m http.server 8765 --bind 127.0.0.1 >"$RUNNER_TEMP/piloz-site-http.log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          output=$(google-chrome --headless --no-sandbox --disable-gpu --virtual-time-budget=5000 --user-data-dir="$RUNNER_TEMP/chrome-pricing" --dump-dom "http://127.0.0.1:8765/tests/pricing-links.html")
           echo "$output" | grep 'data-status="passed"'
