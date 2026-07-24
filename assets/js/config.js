@@ -3,10 +3,10 @@
 
 export const LINKS = {
   login: 'https://app.piloz.fr/?mode=login',
-  signup: 'https://app.piloz.fr/?mode=signup',
-  signupEssential: 'https://app.piloz.fr/?mode=signup&plan=essential',
-  signupPro: 'https://app.piloz.fr/?mode=signup&plan=pro',
-  signupBusiness: 'https://app.piloz.fr/?mode=signup&plan=business',
+  signup: 'https://piloz.fr/checkout.html',
+  signupEssential: 'https://piloz.fr/checkout.html?plan=essential',
+  signupPro: 'https://piloz.fr/checkout.html?plan=pro',
+  signupBusiness: 'https://piloz.fr/checkout.html?plan=business',
   calendly: 'https://calendly.com/erp-piloz/30min',
 };
 
@@ -17,7 +17,6 @@ export function signupForPlan(planId, billing = 'monthly') {
   const url = new URL(LINKS.signup);
   url.searchParams.set('plan', plan);
   url.searchParams.set('billing', interval);
-  url.searchParams.set('source', 'pricing');
   return url.toString();
 }
 

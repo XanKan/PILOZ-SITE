@@ -66,9 +66,9 @@
   "operatingSystem": "Web",
   "description": "Piloz est un ERP simplifié qui centralise le suivi commercial, les devis, les factures, les paiements, les achats et le stock dans une interface unique.",
   "offers": [
-    {"@type": "Offer", "name": "Essentiel", "price": "29", "priceCurrency": "EUR", "url": "https://app.piloz.fr/?mode=signup&plan=essential"},
-    {"@type": "Offer", "name": "Pro", "price": "59", "priceCurrency": "EUR", "url": "https://app.piloz.fr/?mode=signup&plan=pro"},
-    {"@type": "Offer", "name": "Business", "price": "99", "priceCurrency": "EUR", "url": "https://app.piloz.fr/?mode=signup&plan=business"}
+    {"@type": "Offer", "name": "Essentiel", "price": "29", "priceCurrency": "EUR", "url": "https://piloz.fr/checkout.html?plan=essential&billing=monthly"},
+    {"@type": "Offer", "name": "Pro", "price": "59", "priceCurrency": "EUR", "url": "https://piloz.fr/checkout.html?plan=pro&billing=monthly"},
+    {"@type": "Offer", "name": "Business", "price": "99", "priceCurrency": "EUR", "url": "https://piloz.fr/checkout.html?plan=business&billing=monthly"}
   ]
 }
 </script>
@@ -109,7 +109,7 @@
     </nav>
     <div class="nav-actions">
       <a class="btn btn-ghost" href="https://app.piloz.fr/?mode=login">Connexion</a>
-      <a class="btn btn-primary btn-sm" href="https://app.piloz.fr/?mode=signup">Essayer gratuitement</a>
+      <a class="btn btn-primary btn-sm" href="#tarifs">Choisir mon offre</a>
     </div>
     <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu"><span></span></button>
   </div>
@@ -122,7 +122,7 @@
     <a href="contact.html">Contact</a>
     <div class="nav-actions">
       <a class="btn btn-outline btn-block" href="https://app.piloz.fr/?mode=login">Connexion</a>
-      <a class="btn btn-primary btn-block" href="https://app.piloz.fr/?mode=signup">Essayer gratuitement</a>
+      <a class="btn btn-primary btn-block" href="#tarifs">Choisir mon offre</a>
     </div>
   </nav>
 </header>
@@ -137,7 +137,7 @@
       <h1>Toute votre gestion commerciale, <em>enfin réunie</em>.</h1>
       <p class="lede">Piloz est l’ERP simplifié qui centralise votre suivi commercial, vos devis, vos factures, vos paiements, vos achats et votre stock dans une interface simple et connectée.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="https://app.piloz.fr/?mode=signup">Essayer gratuitement</a>
+        <a class="btn btn-primary" href="#tarifs">Choisir mon offre</a>
         <a class="btn btn-outline" href="#produit">Découvrir Piloz</a>
       </div>
       <span class="hero-meta">14 jours d’essai gratuit · Sans engagement</span>
@@ -364,7 +364,7 @@
 
       <div class="payment-trust" aria-label="Paiement sécurisé">
         <span class="payment-trust-lock" aria-hidden="true">✓</span>
-        <div><strong>14 jours d’essai sans carte bancaire</strong><span>Activation et paiement ensuite sécurisés par Stripe dans votre espace Piloz.</span></div>
+        <div><strong>14 jours d’essai · carte bancaire requise</strong><span>Aucun débit aujourd’hui. Premier prélèvement à la fin de l’essai, paiement sécurisé par Stripe.</span></div>
       </div>
 
       <div class="training-addon reveal">
@@ -585,7 +585,7 @@
         <h2>Votre activité commerciale mérite mieux qu’un empilement de fichiers</h2>
         <p>Centralisez vos prospects, vos devis, vos factures, vos paiements, vos achats et votre stock dans Piloz.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://app.piloz.fr/?mode=signup">Essayer Piloz gratuitement</a>
+          <a class="btn btn-primary" href="#tarifs">Choisir mon offre</a>
           <a class="btn btn-outline-light" href="https://calendly.com/erp-piloz/30min" target="_blank" rel="noopener">Réserver une démo</a>
         </div>
         <span class="hero-meta">14 jours d’essai gratuit · Sans engagement</span>
@@ -607,7 +607,7 @@
         <a href="#fonctionnalites">Fonctionnalités</a>
         <a href="#tarifs">Tarifs</a>
         <a href="https://app.piloz.fr/?mode=login">Connexion</a>
-        <a href="https://app.piloz.fr/?mode=signup">Essai gratuit</a>
+        <a href="#tarifs">Essai gratuit</a>
       </div>
       <div class="footer-col">
         <h4>Solutions</h4>
@@ -636,6 +636,6 @@
   </div>
 </footer>
 
-<script type="module" src="assets/js/main.js?v=20260724.1"></script>
+<script type="module" src="assets/js/main.js?v=20260724.2"></script>
 </body>
 </html>

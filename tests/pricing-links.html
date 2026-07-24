@@ -7,11 +7,11 @@ const checks=[];try{
  const monthly=[...document.querySelectorAll('[data-plan-signup]')];
  checks.push(['trois offres mensuelles',monthly.length===3&&monthly.every(link=>new URL(link.href).searchParams.get('billing')==='monthly')]);
  checks.push(['offres transmises',monthly.map(link=>new URL(link.href).searchParams.get('plan')).join(',')==='essential,pro,business']);
- checks.push(['origine transmise',monthly.every(link=>new URL(link.href).searchParams.get('source')==='pricing')]);
+ checks.push(['paiement avant inscription',monthly.every(link=>new URL(link.href).pathname==='/checkout.html')]);
  document.querySelector('[data-period="yearly"]').click();
  const annual=[...document.querySelectorAll('[data-plan-signup]')];
  checks.push(['trois offres annuelles',annual.length===3&&annual.every(link=>new URL(link.href).searchParams.get('billing')==='annual')]);
- checks.push(['destination sécurisée',annual.every(link=>new URL(link.href).origin==='https://app.piloz.fr')]);
+ checks.push(['destination sécurisée',annual.every(link=>new URL(link.href).origin==='https://piloz.fr')]);
 }catch(error){checks.push(['exécution',false,error.message]);}
 const failed=checks.filter(row=>!row[1]),result=document.getElementById('result');result.dataset.status=failed.length?'failed':'passed';result.textContent=failed.length?`Échec : ${failed.map(row=>row[0]).join(', ')}`:`${checks.length}/${checks.length} contrôles tarifs réussis`;
 </script></body></html>

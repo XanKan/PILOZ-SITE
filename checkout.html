@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paiement sécurisé — Piloz</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="assets/icons/favicon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<style>
+ body{min-height:100vh;display:grid;place-items:center;background:linear-gradient(145deg,#f7fffd,#f3f6fb);padding:24px}
+ .checkout-shell{width:min(560px,100%);background:#fff;border:1px solid rgba(12,36,67,.12);border-radius:22px;padding:34px;box-shadow:0 24px 70px rgba(12,36,67,.12);text-align:center}
+ .checkout-shell img{width:76px;height:76px;object-fit:contain;margin-bottom:14px}.checkout-shell h1{margin-bottom:10px}.checkout-shell p{color:#5f6f83;line-height:1.6}.checkout-trust{margin:22px 0;padding:16px;border-radius:14px;background:#edfbf8;color:#0b625c;text-align:left}.checkout-error{color:#a33232;margin-top:16px}.checkout-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px}
+</style>
+</head>
+<body>
+<main class="checkout-shell">
+ <img src="assets/images/brand-mark.png" alt="Piloz">
+ <h1>Ouverture du paiement sécurisé</h1>
+ <p id="checkout-status" role="status" aria-live="polite">Nous préparons votre essai Piloz sur Stripe…</p>
+ <div class="checkout-trust"><strong>Carte bancaire obligatoire, aucun débit aujourd’hui</strong><br>Votre premier prélèvement aura lieu après les 14 jours d’essai si vous ne résiliez pas avant.</div>
+ <p id="checkout-error" class="checkout-error" hidden></p>
+ <div class="checkout-actions"><a class="btn btn-outline" href="index.html#tarifs">Retour aux offres</a><button id="checkout-retry" class="btn btn-primary" type="button" hidden>Réessayer</button></div>
+</main>
+<script type="module" src="assets/js/checkout.js?v=20260724.1"></script>
+</body>
+</html>

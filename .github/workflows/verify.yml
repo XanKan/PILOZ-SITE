@@ -22,7 +22,7 @@ jobs:
           test "$(tr -d '\r\n' < CNAME)" = "piloz.fr"
           ! git ls-files | grep -E '(^|/)\.env($|\.)'
           ! rg -n -S 'sk_(live|test)_[A-Za-z0-9]{16,}|whsec_[A-Za-z0-9]{16,}|service_role.*eyJ' . --glob '!.git/**'
-          rg -n 'billing.*annual|billing.*monthly|source.*pricing' assets/js/config.js assets/js/pricing.js
+          rg -n 'billing.*annual|billing.*monthly|checkout\.html' assets/js/config.js assets/js/pricing.js
       - name: Tester le sélecteur tarifaire
         run: |
           output=$(google-chrome --headless --no-sandbox --disable-gpu --virtual-time-budget=5000 --user-data-dir="$RUNNER_TEMP/chrome-pricing" --dump-dom "file://$PWD/tests/pricing-links.html")
