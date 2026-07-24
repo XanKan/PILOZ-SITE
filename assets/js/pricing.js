@@ -1,5 +1,5 @@
 // Rendu des offres et bascule Mensuel / Annuel, à partir de la source unique config.js.
-import { PLANS } from './config.js';
+import { PLANS, signupForPlan } from './config.js';
 
 function planCardHTML(plan, period) {
   const price = period === 'yearly' ? plan.yearly : plan.monthly;
@@ -11,6 +11,8 @@ function planCardHTML(plan, period) {
 
   const inheritLi = plan.inherit ? `<li class="is-inherit">Tout ${plan.inherit}, plus :</li>` : '';
   const featuresLi = plan.features.map((f) => `<li>${f}</li>`).join('');
+  const billing = period === 'yearly' ? 'annual' : 'monthly';
+  const signupLink = signupForPlan(plan.id, billing);
 
   return `
     <div class="plan-card${plan.featured ? ' is-featured' : ''}" data-plan="${plan.id}">
@@ -20,7 +22,7 @@ function planCardHTML(plan, period) {
       <div class="plan-price">${price}<span> ${unit}</span></div>
       <p class="plan-price-sub">${sub}</p>
       <ul class="plan-features">${inheritLi}${featuresLi}</ul>
-      <a class="btn ${plan.featured ? 'btn-primary' : 'btn-outline'} btn-block" href="${plan.link}">${plan.cta}</a>
+      <a class="btn ${plan.featured ? 'btn-primary' : 'btn-outline'} btn-block" href="${signupLink}" data-plan-signup="${plan.id}" data-billing="${billing}">${plan.cta}</a>
     </div>
   `;
 }

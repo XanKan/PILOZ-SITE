@@ -1,0 +1,17 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><title>Test tarifs Piloz</title>
+<body><div class="pricing-toggle"><button class="is-active" data-period="monthly">Mensuel</button><button data-period="yearly">Annuel</button></div><p id="pricing-save"></p><div id="pricing-grid"></div><div id="result" data-status="running">RUNNING</div>
+<script type="module">
+import { initPricing } from '../assets/js/pricing.js';
+const checks=[];try{
+ initPricing();
+ const monthly=[...document.querySelectorAll('[data-plan-signup]')];
+ checks.push(['trois offres mensuelles',monthly.length===3&&monthly.every(link=>new URL(link.href).searchParams.get('billing')==='monthly')]);
+ checks.push(['offres transmises',monthly.map(link=>new URL(link.href).searchParams.get('plan')).join(',')==='essential,pro,business']);
+ checks.push(['origine transmise',monthly.every(link=>new URL(link.href).searchParams.get('source')==='pricing')]);
+ document.querySelector('[data-period="yearly"]').click();
+ const annual=[...document.querySelectorAll('[data-plan-signup]')];
+ checks.push(['trois offres annuelles',annual.length===3&&annual.every(link=>new URL(link.href).searchParams.get('billing')==='annual')]);
+ checks.push(['destination sécurisée',annual.every(link=>new URL(link.href).origin==='https://app.piloz.fr')]);
+}catch(error){checks.push(['exécution',false,error.message]);}
+const failed=checks.filter(row=>!row[1]),result=document.getElementById('result');result.dataset.status=failed.length?'failed':'passed';result.textContent=failed.length?`Échec : ${failed.map(row=>row[0]).join(', ')}`:`${checks.length}/${checks.length} contrôles tarifs réussis`;
+</script></body></html>

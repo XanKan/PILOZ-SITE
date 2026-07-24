@@ -10,6 +10,17 @@ export const LINKS = {
   calendly: 'https://calendly.com/erp-piloz/30min',
 };
 
+const PLAN_IDS = new Set(['essential', 'pro', 'business']);
+export function signupForPlan(planId, billing = 'monthly') {
+  const plan = PLAN_IDS.has(planId) ? planId : 'essential';
+  const interval = billing === 'annual' ? 'annual' : 'monthly';
+  const url = new URL(LINKS.signup);
+  url.searchParams.set('plan', plan);
+  url.searchParams.set('billing', interval);
+  url.searchParams.set('source', 'pricing');
+  return url.toString();
+}
+
 export const PLANS = [
   {
     id: 'essential',
@@ -19,7 +30,7 @@ export const PLANS = [
     yearly: 290,
     yearlySaving: 58,
     cta: 'Essayer Essentiel',
-    link: LINKS.signupEssential,
+    link: signupForPlan('essential'),
     features: [
       '1 utilisateur',
       'Clients et prospects',
@@ -46,7 +57,7 @@ export const PLANS = [
     yearlySaving: 118,
     featured: true,
     cta: 'Essayer Pro',
-    link: LINKS.signupPro,
+    link: signupForPlan('pro'),
     inherit: 'Essentiel',
     features: [
       'Jusqu’à 5 utilisateurs',
@@ -74,7 +85,7 @@ export const PLANS = [
     yearly: 990,
     yearlySaving: 198,
     cta: 'Essayer Business',
-    link: LINKS.signupBusiness,
+    link: signupForPlan('business'),
     inherit: 'Pro',
     features: [
       'Jusqu’à 15 utilisateurs',

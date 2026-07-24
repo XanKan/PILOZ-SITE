@@ -284,6 +284,18 @@
 }
 .plan-features li.is-inherit::before{content:none}
 
+.payment-trust{
+  margin:22px auto 0;max-width:760px;display:flex;align-items:center;justify-content:center;gap:12px;
+  padding:14px 18px;background:var(--paper-tint);border:1px solid var(--primary-mid);border-radius:var(--r-md);
+  color:var(--ink-soft);text-align:left;
+}
+.payment-trust-lock{
+  width:30px;height:30px;display:grid;place-items:center;flex:0 0 30px;border-radius:50%;
+  background:var(--primary);color:#fff;font-weight:900;
+}
+.payment-trust strong{display:block;color:var(--ink);font-size:.9rem}
+.payment-trust span{display:block;font-size:.8rem;color:var(--body-soft)}
+
 /* ===== Formation en option ===== */
 .training-addon{
   margin-top:24px;display:flex;align-items:center;gap:22px;flex-wrap:wrap;
