@@ -1,26 +1,26 @@
-/* Design tokens — identité Piloz : thème sombre, futuriste, accents lumineux */
+/* Design tokens — identité Piloz : thème clair, sobre et lumineux */
 :root{
   /* Couleurs de marque (issues du logo Piloz) */
-  --primary:#14B8AA;
-  --primary-2:#2DE0CC;
-  --primary-light:rgba(20,184,170,.14);
-  --primary-mid:#5EEAD4;
+  --primary:#10A99D;
+  --primary-2:#087C75;
+  --primary-light:rgba(16,169,157,.11);
+  --primary-mid:#78D9D1;
 
-  /* Accent chaud (variété, distinction) */
-  --accent:#FF6B4A;
-  --accent-2:#FF8C6E;
-  --accent-light:rgba(255,107,74,.14);
+  /* Accent bleu marine issu du logo */
+  --accent:#173B66;
+  --accent-2:#244F7F;
+  --accent-light:rgba(23,59,102,.09);
 
-  /* Neutres — thème sombre */
-  --ink:#F4F6FB;
-  --ink-soft:#C7D0E0;
-  --body:#93A0B8;
-  --body-soft:#5E6A82;
-  --paper:#070B14;
-  --paper-alt:#0D1420;
-  --paper-tint:#0A1B1C;
-  --border:rgba(255,255,255,.1);
-  --border-soft:rgba(255,255,255,.06);
+  /* Neutres — thème clair */
+  --ink:#0B2342;
+  --ink-soft:#304A68;
+  --body:#596B80;
+  --body-soft:#7B899A;
+  --paper:#FFFFFF;
+  --paper-alt:#F5F8FB;
+  --paper-tint:#EDF9F7;
+  --border:rgba(11,35,66,.13);
+  --border-soft:rgba(11,35,66,.075);
 
   /* États */
   --success:#22C55E;
@@ -30,8 +30,8 @@
   --danger:#F0544A;
   --danger-light:rgba(240,84,74,.14);
 
-  /* Void — panneaux les plus profonds (CTA, offre mise en avant) */
-  --deep:#020408;
+  /* Contraste profond réservé aux détails de l'interface produit */
+  --deep:#0B2342;
 
   /* Typo */
   --font-sans:'Albert Sans',system-ui,sans-serif;
@@ -45,10 +45,10 @@
   --r-full:999px;
 
   /* Ombres */
-  --shadow-sm:0 2px 10px rgba(0,0,0,.35);
-  --shadow-md:0 14px 34px rgba(0,0,0,.45);
-  --shadow-lg:0 28px 70px rgba(0,0,0,.55);
-  --shadow-brand:0 0 32px rgba(20,184,170,.35);
+  --shadow-sm:0 6px 18px rgba(11,35,66,.07);
+  --shadow-md:0 18px 42px rgba(11,35,66,.10);
+  --shadow-lg:0 34px 82px rgba(11,35,66,.14);
+  --shadow-brand:0 14px 34px rgba(16,169,157,.20);
 
   /* Rythme */
   --container:1200px;
@@ -67,8 +67,7 @@
   --z-overlay:200;
 }
 
-/* Le cadre produit conserve la palette claire de l'application réelle,
-   comme un écran lumineux posé sur la page sombre. */
+/* Le cadre produit reprend la palette claire de l'application réelle. */
 .device-screen{
   --paper:#FFFFFF;--paper-alt:#F5F6F8;--paper-tint:#EEFAF7;
   --ink:#0A1220;--ink-soft:#2B3648;

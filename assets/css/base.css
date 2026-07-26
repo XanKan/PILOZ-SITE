@@ -8,8 +8,8 @@ body{
   color:var(--ink);
   background-color:var(--paper);
   background-image:
-    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+    linear-gradient(rgba(11,35,66,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11,35,66,.025) 1px, transparent 1px);
   background-size:56px 56px;
   line-height:1.5;
   -webkit-font-smoothing:antialiased;
