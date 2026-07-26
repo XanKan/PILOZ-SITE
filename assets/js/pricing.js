@@ -19,7 +19,7 @@ function planCardHTML(plan, period) {
       ${plan.featured ? '<span class="plan-badge">Le plus choisi</span>' : ''}
       <div class="plan-name">${plan.name}</div>
       <p class="plan-desc">${plan.desc}</p>
-      <div class="plan-price">${price}<span> ${unit}</span></div>
+      <div class="plan-price"><strong>${price}</strong><span>${unit}</span></div>
       <p class="plan-price-sub">${sub}</p>
       <ul class="plan-features">${inheritLi}${featuresLi}</ul>
       <a class="btn ${plan.featured ? 'btn-primary' : 'btn-outline'} btn-block" href="${signupLink}" data-plan-signup="${plan.id}" data-billing="${billing}">${plan.cta}</a>
