@@ -8,6 +8,7 @@ export const LINKS = {
   signupPro: 'https://piloz.fr/checkout.html?plan=pro',
   signupBusiness: 'https://piloz.fr/checkout.html?plan=business',
   calendly: 'https://calendly.com/erp-piloz/30min',
+  contactEndpoint: 'https://hpxcbemezvynofxiffzs.supabase.co/functions/v1/public-contact',
 };
 
 const PLAN_IDS = new Set(['essential', 'pro', 'business']);

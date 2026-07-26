@@ -32,7 +32,7 @@
 <link rel="stylesheet" href="assets/css/variables.css">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/layout.css">
-<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/components.css?v=20260726.1">
 <link rel="stylesheet" href="assets/css/animations.css">
 <link rel="stylesheet" href="assets/css/responsive.css">
 <link rel="stylesheet" href="assets/css/piloz-premium.css?v=20260726.3">
@@ -94,26 +94,32 @@
             </div>
           </div>
 
-          <form id="contact-form" class="contact-form" action="https://formsubmit.co/ajax/erp-piloz@outlook.com" method="POST" novalidate>
-            <input type="hidden" name="_subject" value="Nouveau message depuis piloz.fr">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-
+          <form id="contact-form" class="contact-form" method="POST" novalidate>
+            <div class="contact-form-pair">
+              <div class="form-row">
+                <label for="cf-first-name">Prénom</label>
+                <input id="cf-first-name" name="first_name" type="text" minlength="2" maxlength="80" required autocomplete="given-name">
+              </div>
+              <div class="form-row">
+                <label for="cf-last-name">Nom</label>
+                <input id="cf-last-name" name="last_name" type="text" minlength="2" maxlength="100" required autocomplete="family-name">
+              </div>
+            </div>
             <div class="form-row">
-              <label for="cf-name">Nom</label>
-              <input id="cf-name" name="Nom" type="text" required autocomplete="name">
+              <label for="cf-company">Entreprise</label>
+              <input id="cf-company" name="company" type="text" maxlength="160" required autocomplete="organization">
             </div>
             <div class="form-row">
               <label for="cf-email">E-mail</label>
-              <input id="cf-email" name="Email" type="email" required autocomplete="email">
-            </div>
-            <div class="form-row">
-              <label for="cf-company">Entreprise <span>(optionnel)</span></label>
-              <input id="cf-company" name="Entreprise" type="text" autocomplete="organization">
+              <input id="cf-email" name="email" type="email" maxlength="254" required autocomplete="email">
             </div>
             <div class="form-row">
               <label for="cf-message">Message</label>
-              <textarea id="cf-message" name="Message" required></textarea>
+              <textarea id="cf-message" name="message" minlength="10" maxlength="5000" required></textarea>
+            </div>
+            <div class="form-honeypot" aria-hidden="true">
+              <label for="cf-website">Site internet</label>
+              <input id="cf-website" name="website" type="text" tabindex="-1" autocomplete="off">
             </div>
 
             <button class="btn btn-primary btn-block" type="submit">Envoyer le message</button>
@@ -127,8 +133,8 @@
             <p>Écrivez-nous directement à<br><a href="mailto:erp-piloz@outlook.com">erp-piloz@outlook.com</a></p>
           </div>
           <div class="contact-card">
-            <h3>Réserver un échange</h3>
-            <p>Un besoin particulier ou plus de 15 utilisateurs ?<br><a href="https://calendly.com/erp-piloz/30min" target="_blank" rel="noopener">Réservez un créneau de 15 minutes</a></p>
+            <h3>Réserver un appel</h3>
+            <p>Un besoin particulier ou plus de 15 utilisateurs ?<br><a href="https://calendly.com/erp-piloz/30min" target="_blank" rel="noopener">Réserver un appel de 15 minutes</a></p>
           </div>
           <div class="contact-card">
             <h3>Délai de réponse</h3>
@@ -182,6 +188,6 @@
   </div>
 </footer>
 
-<script type="module" src="assets/js/main.js?v=20260726.3"></script>
+<script type="module" src="assets/js/main.js?v=20260726.4"></script>
 </body>
 </html>

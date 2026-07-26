@@ -2,7 +2,7 @@ import { initNavigation } from './navigation.js';
 import { initScrollReveal } from './animations.js';
 import { initPricing } from './pricing.js?v=20260726.3';
 import { initProductDemo } from './product-demo.js';
-import { initContactForm } from './contact.js';
+import { initContactForm } from './contact.js?v=20260726.1';
 import { initPremiumMotion } from './premium-motion.js';
 
 document.addEventListener('DOMContentLoaded', () => {
