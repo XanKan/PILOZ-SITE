@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Piloz | ERP de gestion commerciale pour TPE</title>
-<meta name="description" content="Piloz, l’ERP simplifié des indépendants, artisans et TPE : suivi commercial, devis, factures, paiements, achats et stock dans une seule interface. Essai gratuit 14 jours.">
+<meta name="description" content="Piloz, l’ERP de gestion commerciale pour TPE : devis, factures, paiements et préparation à la facturation électronique avec Factur-X et CII.">
 <link rel="canonical" href="https://piloz.fr/">
 <meta name="robots" content="index, follow">
 <meta name="google-site-verification" content="h11PvtCBGR1wy1IvKnObylBNvqouRTTVnrMQ5WPAWYc">
@@ -18,7 +18,7 @@
 <meta property="og:locale" content="fr_FR">
 <meta property="og:url" content="https://piloz.fr/">
 <meta property="og:title" content="Piloz | ERP de gestion commerciale pour TPE">
-<meta property="og:description" content="Piloz, l’ERP simplifié des indépendants, artisans et TPE : suivi commercial, devis, factures, paiements, achats et stock dans une seule interface.">
+<meta property="og:description" content="Gérez devis, factures et paiements, et préparez votre entreprise à la facturation électronique avec les formats Factur-X et CII.">
 <meta property="og:image" content="https://piloz.fr/assets/images/og-image.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
@@ -26,7 +26,7 @@
 <meta property="og:image:alt" content="Piloz, logiciel de gestion commerciale pour indépendants, artisans et TPE">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Piloz | ERP de gestion commerciale pour TPE">
-<meta name="twitter:description" content="Piloz, l’ERP simplifié des indépendants, artisans et TPE : suivi commercial, devis, factures, paiements, achats et stock dans une seule interface.">
+<meta name="twitter:description" content="Gérez devis, factures et paiements, et préparez votre entreprise à la facturation électronique avec Factur-X et CII.">
 <meta name="twitter:image" content="https://piloz.fr/assets/images/og-image.png">
 <meta name="twitter:image:alt" content="Piloz, logiciel de gestion commerciale pour indépendants, artisans et TPE">
 <meta name="color-scheme" content="light">
@@ -41,7 +41,7 @@
 <link rel="stylesheet" href="assets/css/components.css?v=20260726.1">
 <link rel="stylesheet" href="assets/css/animations.css">
 <link rel="stylesheet" href="assets/css/responsive.css">
-<link rel="stylesheet" href="assets/css/piloz-premium.css?v=20260726.4">
+<link rel="stylesheet" href="assets/css/piloz-premium.css?v=20260729.1">
 
 <script type="application/ld+json">
 {
@@ -92,7 +92,8 @@
     {"@type": "Question", "name": "Puis-je ajouter plusieurs utilisateurs ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, à partir de l’offre Pro, jusqu’à 5 utilisateurs, et jusqu’à 15 utilisateurs avec l’offre Business."}},
     {"@type": "Question", "name": "Puis-je changer d’offre ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, vous pouvez changer d’offre à tout moment depuis votre compte."}},
     {"@type": "Question", "name": "Puis-je importer mes clients et articles ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, vous pouvez importer vos clients et vos articles pour démarrer sans ressaisie."}},
-    {"@type": "Question", "name": "Piloz remplace-t-il mon expert-comptable ?", "acceptedAnswer": {"@type": "Answer", "text": "Piloz facilite la gestion commerciale et la préparation des données, mais ne remplace pas l’accompagnement comptable ou juridique d’un professionnel."}}
+    {"@type": "Question", "name": "Piloz remplace-t-il mon expert-comptable ?", "acceptedAnswer": {"@type": "Answer", "text": "Piloz facilite la gestion commerciale et la préparation des données, mais ne remplace pas l’accompagnement comptable ou juridique d’un professionnel."}},
+    {"@type": "Question", "name": "Piloz est-il compatible avec la facturation électronique ?", "acceptedAnswer": {"@type": "Answer", "text": "Piloz prend en charge les formats Factur-X et CII et prépare la connexion à une plateforme agréée. Cette connexion est actuellement testée en bac à sable avant son activation en production."}}
   ]
 }
 </script>
@@ -137,6 +138,20 @@
 
   <!-- HERO -->
   <section class="hero" id="hero">
+    <div class="container einvoice-banner-wrap">
+      <a class="einvoice-banner" href="#facturation-electronique" aria-label="Découvrir la compatibilité de Piloz avec la facturation électronique">
+        <span class="einvoice-banner-icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h8l4 4v16H6z"/><path d="M14 2v5h5"/><path d="m9 14 2 2 4-5"/></svg>
+        </span>
+        <span class="einvoice-banner-copy">
+          <span class="einvoice-banner-kicker"><i></i> Réforme 2026</span>
+          <strong>Facturation électronique : Piloz est compatible avec Factur-X et CII</strong>
+          <small>Connexion à une plateforme agréée en cours de validation avant activation en production.</small>
+        </span>
+        <span class="einvoice-banner-tags" aria-hidden="true"><b>Factur-X</b><b>CII</b></span>
+        <span class="einvoice-banner-cta">Découvrir <i>→</i></span>
+      </a>
+    </div>
     <div class="container hero-inner">
       <div class="hero-copy">
         <p class="hero-hook">Rejoignez les indépendants, artisans et TPE qui reprennent le contrôle de leur gestion commerciale.</p>
@@ -166,6 +181,52 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- FACTURATION ÉLECTRONIQUE -->
+  <section class="section einvoice-section" id="facturation-electronique">
+    <div class="container">
+      <div class="einvoice-heading">
+        <div>
+          <span class="eyebrow">Facturation électronique</span>
+          <h2>Anticipez la réforme sans changer vos habitudes</h2>
+        </div>
+        <p class="lede">Piloz prépare vos factures aux formats structurés attendus et centralise leur suivi dans la même interface que vos devis et vos règlements.</p>
+      </div>
+
+      <div class="einvoice-grid">
+        <article class="einvoice-card">
+          <span class="einvoice-card-number">01</span>
+          <div class="einvoice-card-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h5M8 17h3"/></svg></div>
+          <h3>Formats structurés</h3>
+          <p>Conversion des factures aux formats <strong>Factur-X</strong> et <strong>CII</strong>, conçus pour transporter des données lisibles par les logiciels comptables.</p>
+        </article>
+        <article class="einvoice-card">
+          <span class="einvoice-card-number">02</span>
+          <div class="einvoice-card-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h11l-3-3"/><path d="m18 7-3 3"/><path d="M17 17H6l3 3"/><path d="m6 17 3-3"/></svg></div>
+          <h3>Émission et réception</h3>
+          <p>Un parcours prévu pour les <strong>factures clients et fournisseurs</strong>, relié à une plateforme agréée par l’administration.</p>
+        </article>
+        <article class="einvoice-card">
+          <span class="einvoice-card-number">03</span>
+          <div class="einvoice-card-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h3l2-4 3 8 2-4h2"/></svg></div>
+          <h3>Suivi des statuts</h3>
+          <p>Retrouvez dans Piloz les étapes de traitement, les décisions et l’historique afin de conserver une piste claire de chaque facture.</p>
+        </article>
+      </div>
+
+      <div class="einvoice-timeline">
+        <div class="einvoice-timeline-title">
+          <span class="einvoice-pulse" aria-hidden="true"></span>
+          <div><small>Calendrier officiel</small><strong>Les prochaines échéances</strong></div>
+        </div>
+        <div class="einvoice-deadline"><strong>1<sup>er</sup> septembre 2026</strong><span>Réception obligatoire pour toutes les entreprises</span></div>
+        <div class="einvoice-deadline"><strong>1<sup>er</sup> septembre 2027</strong><span>Émission obligatoire pour les PME et microentreprises</span></div>
+        <a href="https://www.economie.gouv.fr/tout-savoir-sur-la-facturation-electronique-pour-les-entreprises" target="_blank" rel="noopener noreferrer">Voir le calendrier officiel <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <p class="einvoice-transparency"><strong>Transparence :</strong> la connexion de Piloz à la plateforme agréée est actuellement testée en bac à sable. Son activation en production interviendra après la recette finale.</p>
     </div>
   </section>
 
@@ -615,6 +676,10 @@
         <details class="faq-item">
           <summary>Piloz remplace-t-il mon expert-comptable ?</summary>
           <p class="faq-a">Piloz facilite la gestion commerciale et la préparation des données, mais ne remplace pas l’accompagnement comptable ou juridique d’un professionnel.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Piloz est-il compatible avec la facturation électronique ?</summary>
+          <p class="faq-a">Piloz prend en charge les formats Factur-X et CII et prépare la connexion à une plateforme agréée. Cette connexion est actuellement testée en bac à sable avant son activation en production.</p>
         </details>
       </div>
     </div>
