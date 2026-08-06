@@ -24,6 +24,7 @@ jobs:
           ! grep -RInE --exclude-dir=.git 'sk_(live|test)_[A-Za-z0-9]{16,}|whsec_[A-Za-z0-9]{16,}|service_role.*eyJ' .
           grep -nE 'billing.*annual|billing.*monthly|checkout\.html' assets/js/config.js assets/js/pricing.js
           node scripts/verify-seo.mjs
+          node tests/no-stock-public-copy-static.cjs
       - name: Tester le sélecteur tarifaire
         run: |
           python3 -m http.server 8765 --bind 127.0.0.1 >"$RUNNER_TEMP/piloz-site-http.log" 2>&1 &

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Piloz | ERP de gestion commerciale pour TPE</title>
-<meta name="description" content="Piloz, l’ERP de gestion commerciale pour TPE : devis, factures, paiements et préparation à la facturation électronique avec Factur-X et CII.">
+<title>Piloz | Logiciel de gestion commerciale pour TPE</title>
+<meta name="description" content="Piloz, le logiciel de gestion commerciale pour TPE : devis, factures, paiements et préparation à la facturation électronique avec Factur-X et CII.">
 <link rel="canonical" href="https://piloz.fr/">
 <meta name="robots" content="index, follow">
 <meta name="google-site-verification" content="h11PvtCBGR1wy1IvKnObylBNvqouRTTVnrMQ5WPAWYc">
@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="Piloz">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:url" content="https://piloz.fr/">
-<meta property="og:title" content="Piloz | ERP de gestion commerciale pour TPE">
+<meta property="og:title" content="Piloz | Logiciel de gestion commerciale pour TPE">
 <meta property="og:description" content="Gérez devis, factures et paiements, et préparez votre entreprise à la facturation électronique avec les formats Factur-X et CII.">
 <meta property="og:image" content="https://piloz.fr/assets/images/og-image.png">
 <meta property="og:image:type" content="image/png">
@@ -25,7 +25,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Piloz, logiciel de gestion commerciale pour indépendants, artisans et TPE">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Piloz | ERP de gestion commerciale pour TPE">
+<meta name="twitter:title" content="Piloz | Logiciel de gestion commerciale pour TPE">
 <meta name="twitter:description" content="Gérez devis, factures et paiements, et préparez votre entreprise à la facturation électronique avec Factur-X et CII.">
 <meta name="twitter:image" content="https://piloz.fr/assets/images/og-image.png">
 <meta name="twitter:image:alt" content="Piloz, logiciel de gestion commerciale pour indépendants, artisans et TPE">
@@ -38,7 +38,7 @@
 <link rel="stylesheet" href="assets/css/variables.css">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/layout.css">
-<link rel="stylesheet" href="assets/css/components.css?v=20260726.1">
+<link rel="stylesheet" href="assets/css/components.css?v=20260806.1">
 <link rel="stylesheet" href="assets/css/animations.css">
 <link rel="stylesheet" href="assets/css/responsive.css">
 <link rel="stylesheet" href="assets/css/piloz-premium.css?v=20260729.1">
@@ -69,11 +69,12 @@
   "url": "https://piloz.fr/",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Web",
-  "description": "Piloz est un ERP simplifié qui centralise le suivi commercial, les devis, les factures, les paiements, les achats et le stock dans une interface unique.",
+  "description": "Piloz est un logiciel de gestion commerciale qui centralise les prospects, les devis, les factures, les paiements et les achats dans une interface unique.",
   "offers": [
+    {"@type": "Offer", "name": "Découverte", "price": "0", "priceCurrency": "EUR", "url": "https://piloz.fr/contact.html?offer=discovery"},
     {"@type": "Offer", "name": "Essentiel", "price": "29", "priceCurrency": "EUR", "url": "https://piloz.fr/checkout.html?plan=essential&billing=monthly"},
     {"@type": "Offer", "name": "Pro", "price": "59", "priceCurrency": "EUR", "url": "https://piloz.fr/checkout.html?plan=pro&billing=monthly"},
-    {"@type": "Offer", "name": "Business", "price": "99", "priceCurrency": "EUR", "url": "https://piloz.fr/checkout.html?plan=business&billing=monthly"}
+    {"@type": "Offer", "name": "Business", "price": "119", "priceCurrency": "EUR", "url": "https://piloz.fr/checkout.html?plan=business&billing=monthly"}
   ]
 }
 </script>
@@ -82,13 +83,13 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "Piloz est-il un ERP ?", "acceptedAnswer": {"@type": "Answer", "text": "Piloz est un ERP simplifié, pensé pour la gestion commerciale des indépendants, artisans et TPE : suivi commercial, devis, factures, paiements, achats et stock. Il ne couvre pas l’ensemble des modules d’un ERP traditionnel (comptabilité complète, paie, production) mais répond aux besoins essentiels de gestion commerciale d’une petite structure."}},
-    {"@type": "Question", "name": "Combien de temps dure l’essai ?", "acceptedAnswer": {"@type": "Answer", "text": "L’essai gratuit dure 14 jours, sans engagement, avec accès à l’ensemble des fonctionnalités de l’offre choisie."}},
+    {"@type": "Question", "name": "Piloz est-il un ERP ?", "acceptedAnswer": {"@type": "Answer", "text": "Piloz est un logiciel de gestion commerciale pensé pour les indépendants, artisans et TPE : suivi commercial, devis, factures, paiements et achats. Il ne remplace pas une comptabilité complète, un logiciel de paie ou un outil de production."}},
+    {"@type": "Question", "name": "Existe-t-il une offre gratuite ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. L’offre Découverte est gratuite et sans carte bancaire. Elle comprend 1 utilisateur, jusqu’à 20 clients et prospects actifs, 5 devis numérotés et 5 factures finalisées par mois. L’accès est proposé sur demande pendant le lancement."}},
     {"@type": "Question", "name": "Dois-je installer Piloz ?", "acceptedAnswer": {"@type": "Answer", "text": "Non, Piloz fonctionne directement dans votre navigateur, sans installation, sur ordinateur, tablette ou mobile."}},
     {"@type": "Question", "name": "Mes données sont-elles séparées de celles des autres entreprises ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, chaque entreprise dispose de son propre espace : vos clients, devis, factures et documents ne sont jamais mélangés avec ceux d’un autre compte."}},
     {"@type": "Question", "name": "Puis-je créer des devis et factures personnalisés ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, avec votre logo, vos couleurs, votre pied de page et vos coordonnées bancaires selon l’offre choisie."}},
     {"@type": "Question", "name": "Puis-je suivre les factures impayées ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, Piloz distingue les factures à venir, en retard, partiellement encaissées et encaissées."}},
-    {"@type": "Question", "name": "Piloz gère-t-il les achats et le stock ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui à partir de l’offre Pro : fournisseurs, commandes fournisseurs, réceptions et suivi de stock."}},
+    {"@type": "Question", "name": "Piloz gère-t-il les achats ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui à partir de l’offre Pro : fournisseurs, achats et commandes fournisseurs sont réunis dans le même espace que le suivi commercial."}},
     {"@type": "Question", "name": "Puis-je ajouter plusieurs utilisateurs ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, à partir de l’offre Pro, jusqu’à 5 utilisateurs, et jusqu’à 15 utilisateurs avec l’offre Business."}},
     {"@type": "Question", "name": "Puis-je changer d’offre ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, vous pouvez changer d’offre à tout moment depuis votre compte."}},
     {"@type": "Question", "name": "Puis-je importer mes clients et articles ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, vous pouvez importer vos clients et vos articles pour démarrer sans ressaisie."}},
@@ -157,12 +158,12 @@
         <p class="hero-hook">Rejoignez les indépendants, artisans et TPE qui reprennent le contrôle de leur gestion commerciale.</p>
         <span class="eyebrow">Gestion commerciale nouvelle génération</span>
         <h1>Toute votre gestion commerciale, <em>enfin réunie</em>.</h1>
-        <p class="lede">Piloz est l’ERP simplifié qui centralise votre suivi commercial, vos devis, vos factures, vos paiements, vos achats et votre stock dans une interface simple et connectée.</p>
+        <p class="lede">Piloz centralise votre suivi commercial, vos devis, vos factures, vos paiements, vos relances et vos achats dans une interface simple et connectée.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#tarifs">Choisir mon offre</a>
           <a class="btn btn-outline" href="#produit">Découvrir Piloz</a>
         </div>
-        <span class="hero-meta">14 jours d’essai gratuit · Sans engagement</span>
+        <span class="hero-meta">Une offre gratuite · Sans carte bancaire</span>
         <div class="hero-atlas" aria-hidden="true">
           <span>Devis <i>→</i> Facture</span>
           <span>Paiements suivis</span>
@@ -309,8 +310,8 @@
 
   <div class="signal-marquee" aria-label="Les modules réunis dans Piloz">
     <div class="signal-marquee-track" aria-hidden="true">
-      <div class="signal-marquee-group"><span>Prospects</span><i></i><span>Devis</span><i></i><span>Factures</span><i></i><span>Paiements</span><i></i><span>Achats</span><i></i><span>Stock</span><i></i></div>
-      <div class="signal-marquee-group"><span>Prospects</span><i></i><span>Devis</span><i></i><span>Factures</span><i></i><span>Paiements</span><i></i><span>Achats</span><i></i><span>Stock</span><i></i></div>
+      <div class="signal-marquee-group"><span>Prospects</span><i></i><span>Devis</span><i></i><span>Factures</span><i></i><span>Paiements</span><i></i><span>Achats</span><i></i><span>Relances</span><i></i></div>
+      <div class="signal-marquee-group"><span>Prospects</span><i></i><span>Devis</span><i></i><span>Factures</span><i></i><span>Paiements</span><i></i><span>Achats</span><i></i><span>Relances</span><i></i></div>
     </div>
   </div>
 
@@ -342,7 +343,7 @@
         <div class="feature-card">
           <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="5" rx="1.4"/><rect x="3" y="10" width="18" height="5" rx="1.4"/><rect x="3" y="17" width="18" height="4" rx="1.4"/></svg></div>
           <h3>Tout centraliser</h3>
-          <p>Prospects, devis, factures, paiements, achats et stock dans une seule application, au lieu d’un tableur, d’un logiciel de facturation et de notes éparpillées.</p>
+          <p>Prospects, devis, factures, paiements, relances et achats dans une seule application, au lieu d’un tableur, d’un logiciel de facturation et de notes éparpillées.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
@@ -371,8 +372,8 @@
         </div>
         <div class="feature-card">
           <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg></div>
-          <h3>Piloter vos achats et votre stock</h3>
-          <p>Commandes fournisseurs, réceptions et niveaux de stock mis à jour automatiquement, avec des alertes de seuil sur vos articles sensibles.</p>
+          <h3>Piloter vos achats fournisseurs</h3>
+          <p>Centralisez vos fournisseurs, vos achats et vos commandes pour garder une vue claire sur les dépenses liées à votre activité.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7z"/></svg></div>
@@ -409,7 +410,7 @@
         <div class="feature-card">
           <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg></div>
           <h3>Qui grandit avec vous</h3>
-          <p>De l’indépendant à la PME avec stock et plusieurs utilisateurs, Piloz s’adapte à la taille de votre activité.</p>
+          <p>De l’indépendant à la PME avec plusieurs utilisateurs, Piloz s’adapte à la taille et à l’organisation de votre activité.</p>
         </div>
       </div>
     </div>
@@ -440,7 +441,7 @@
       <div class="seo-card-grid">
         <a class="seo-card" href="logiciel-devis-facturation.html"><span>Devis & facturation</span><h3>Structurer le parcours du devis au paiement</h3><p>Pour créer, envoyer, suivre et transformer vos documents commerciaux sans double saisie.</p><b>Lire le guide <i>→</i></b></a>
         <a class="seo-card" href="logiciel-gestion-commerciale-tpe.html"><span>Gestion commerciale TPE</span><h3>Réunir le suivi commercial dans un seul outil</h3><p>Pour centraliser clients, opportunités, ventes, achats et indicateurs utiles à la petite entreprise.</p><b>Lire le guide <i>→</i></b></a>
-        <a class="seo-card" href="logiciel-facturation-artisan.html"><span>Facturation artisan</span><h3>Gagner du temps entre le chantier et le bureau</h3><p>Pour préparer des devis détaillés, facturer l’avancement et suivre les règlements plus sereinement.</p><b>Lire le guide <i>→</i></b></a>
+        <a class="seo-card" href="logiciel-facturation-artisan.html"><span>Facturation artisan</span><h3>Gagner du temps entre le chantier et le bureau</h3><p>Pour préparer des devis détaillés, gérer les acomptes et suivre les règlements plus sereinement.</p><b>Lire le guide <i>→</i></b></a>
       </div>
     </div>
   </section>
@@ -450,8 +451,8 @@
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">Tarifs</span>
-        <h2>Trois offres, un essai gratuit de 14 jours</h2>
-        <p class="lede">Changez ou arrêtez quand vous voulez.</p>
+        <h2>Une offre gratuite, puis trois licences pour évoluer</h2>
+        <p class="lede">Commencez simplement, puis choisissez les automatisations et le niveau d’accompagnement utiles à votre équipe.</p>
       </div>
 
       <div class="center">
@@ -464,18 +465,19 @@
 
       <div class="pricing-grid" id="pricing-grid"><!-- généré par pricing.js --></div>
 
-      <div class="payment-trust" aria-label="Paiement sécurisé">
+      <div class="payment-trust" aria-label="Offres et paiement sécurisé">
         <span class="payment-trust-lock" aria-hidden="true">✓</span>
-        <div><strong>14 jours d’essai · carte bancaire requise</strong><span>Aucun débit aujourd’hui. Premier prélèvement à la fin de l’essai, paiement sécurisé par Stripe.</span></div>
+        <div><strong>Découverte gratuite · sans carte bancaire</strong><span>Les licences payantes restent sans engagement et sont réglées de façon sécurisée via Stripe.</span></div>
       </div>
 
-      <div class="training-addon reveal">
-        <div class="training-addon-text">
-          <h3>Formation à la prise en main</h3>
-          <p>En option sur toutes les offres : une demi-journée avec notre équipe pour former vous et vos équipes à Piloz.</p>
+      <div class="pricing-options reveal">
+        <h3>Options à la carte</h3>
+        <div class="pricing-options-grid">
+          <div class="pricing-option"><div><strong>Utilisateur supplémentaire</strong><span>Pour les licences Pro et Business.</span></div><b>9 € HT/mois</b></div>
+          <div class="pricing-option"><div><strong>Import de données assisté</strong><span>Préparation et reprise accompagnée de vos données.</span></div><b>190 € HT</b></div>
+          <div class="pricing-option"><div><strong>Formation à la prise en main</strong><span>Une demi-journée avec votre équipe.</span></div><b>290 € HT</b></div>
+          <div class="pricing-option"><div><strong>Intégration ou développement spécifique</strong><span>Cadrage selon votre besoin et vos outils.</span></div><b>Sur devis</b></div>
         </div>
-        <div class="training-addon-price">400 € HT<span>/ demi-journée</span></div>
-        <button class="btn btn-outline" type="button" disabled title="Bientôt disponible">Réserver un créneau</button>
       </div>
 
       <p class="custom-plan">Plus de 15 utilisateurs ou un besoin particulier ? <a href="https://calendly.com/erp-piloz/30min" target="_blank" rel="noopener">Réservez un échange de 15 minutes</a>.</p>
@@ -490,96 +492,89 @@
               <thead>
                 <tr>
                   <th>Fonctionnalité</th>
+                  <th>Découverte <span data-plan-price="discovery" class="mono" style="display:block;font-weight:600;font-size:.72rem;color:var(--body-soft)"></span></th>
                   <th>Essentiel <span data-plan-price="essential" class="mono" style="display:block;font-weight:600;font-size:.72rem;color:var(--body-soft)"></span></th>
                   <th>Pro <span data-plan-price="pro" class="mono" style="display:block;font-weight:600;font-size:.72rem;color:var(--body-soft)"></span></th>
                   <th>Business <span data-plan-price="business" class="mono" style="display:block;font-weight:600;font-size:.72rem;color:var(--body-soft)"></span></th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td class="cat" colspan="4">Utilisateurs</td></tr>
-                <tr><td>Nombre d’utilisateurs</td><td>1</td><td>5</td><td>15</td></tr>
+                <tr><td class="cat" colspan="5">Utilisateurs et volume</td></tr>
+                <tr><td>Nombre d’utilisateurs</td><td>1</td><td>1</td><td>5</td><td>15</td></tr>
+                <tr><td>Clients et prospects actifs</td><td>20</td><td>Illimité</td><td>Illimité</td><td>Illimité</td></tr>
 
-                <tr><td class="cat" colspan="4">Suivi commercial</td></tr>
-                <tr><td>Pipeline commercial</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-                <tr><td>Automatisations du pipeline</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-                <tr><td>Notifications collaboratives</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                <tr><td class="cat" colspan="5">Suivi commercial</td></tr>
+                <tr><td>Pipeline et activités</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                <tr><td>Automatisations du pipeline</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                <tr><td>Notifications collaboratives</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td></tr>
 
-                <tr><td class="cat" colspan="4">Devis</td></tr>
-                <tr><td>Devis</td><td class="yes">Illimité</td><td class="yes">Illimité</td><td class="yes">Illimité</td></tr>
-                <tr><td>Modèles personnalisables</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                <tr><td class="cat" colspan="5">Devis et factures</td></tr>
+                <tr><td>Devis numérotés</td><td>5 / mois</td><td>Illimité</td><td>Illimité</td><td>Illimité</td></tr>
+                <tr><td>Factures finalisées</td><td>5 / mois</td><td>Illimité</td><td>Illimité</td><td>Illimité</td></tr>
+                <tr><td>Acomptes et soldes</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                <tr><td>Factures récurrentes</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td></tr>
 
-                <tr><td class="cat" colspan="4">Factures</td></tr>
-                <tr><td>Factures et avoirs</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-                <tr><td>Acompte, situation, solde</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                <tr><td class="cat" colspan="5">Paiements et relances</td></tr>
+                <tr><td>Suivi des paiements et échéances</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                <tr><td>Relances manuelles</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                <tr><td>Relances automatiques</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                <tr><td>Exports PDF et CSV</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
 
-                <tr><td class="cat" colspan="4">Paiements</td></tr>
-                <tr><td>Suivi des paiements et échéances</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-                <tr><td>Export PDF et CSV</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                <tr><td class="cat" colspan="5">Achats</td></tr>
+                <tr><td>Fournisseurs et commandes fournisseurs</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td></tr>
 
-                <tr><td class="cat" colspan="4">Achats</td></tr>
-                <tr><td>Fournisseurs et commandes fournisseurs</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                <tr><td class="cat" colspan="5">Modèles et pilotage</td></tr>
+                <tr><td>Modèles de documents</td><td>Standards</td><td>Standards</td><td>Avancés</td><td>Avancés</td></tr>
+                <tr><td>Tableau de bord</td><td>Essentiel</td><td>Essentiel</td><td>Avancé</td><td>Avancé</td></tr>
+                <tr><td>Rapports de marge</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td></tr>
 
-                <tr><td class="cat" colspan="4">Stock</td></tr>
-                <tr><td>Gestion de stock et inventaires</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-                <tr><td>Plusieurs entrepôts</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="yes">✓</td></tr>
+                <tr><td class="cat" colspan="5">Équipe et administration</td></tr>
+                <tr><td>Rôles et permissions</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td>Prédéfinis</td><td>Personnalisés</td></tr>
+                <tr><td>Historique d’activité</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="yes">✓</td></tr>
 
-                <tr><td class="cat" colspan="4">Modèles</td></tr>
-                <tr><td>Modèles de documents</td><td>Standards</td><td>Personnalisables</td><td>Personnalisables</td></tr>
-                <tr><td>Plusieurs grilles tarifaires</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="yes">✓</td></tr>
-
-                <tr><td class="cat" colspan="4">Rapports</td></tr>
-                <tr><td>Tableau de bord</td><td>Essentiel</td><td>Avancé</td><td>Avancé</td></tr>
-                <tr><td>Rapports de marge</td><td class="no">Non inclus</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-                <tr><td>Rapports personnalisés</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="yes">✓</td></tr>
-
-                <tr><td class="cat" colspan="4">Permissions</td></tr>
-                <tr><td>Rôles et permissions</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="yes">Avancés</td></tr>
-                <tr><td>Processus de validation interne</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="yes">✓</td></tr>
-
-                <tr><td class="cat" colspan="4">Support</td></tr>
-                <tr><td>Support</td><td>E-mail</td><td>Prioritaire</td><td>Prioritaire renforcé</td></tr>
-                <tr><td>Accompagnement au déploiement</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="yes">✓</td></tr>
-                <tr><td>Accès API</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td>Lorsqu’il sera disponible</td></tr>
+                <tr><td class="cat" colspan="5">Support</td></tr>
+                <tr><td>Niveau de support</td><td>Documentation</td><td>E-mail</td><td>Prioritaire</td><td>Prioritaire renforcé</td></tr>
+                <tr><td>Accompagnement au démarrage</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td>1 heure</td><td>1 heure</td></tr>
+                <tr><td>Accompagnement au déploiement</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="yes">✓</td></tr>
+                <tr><td>API et webhooks</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td class="no">Non inclus</td><td>Lorsqu’ils seront disponibles</td></tr>
               </tbody>
             </table>
           </div>
 
+          <p class="comparator-mobile-order"><strong>Ordre :</strong> Découverte · Essentiel · Pro · Business</p>
           <div class="comparator-accordion">
-            <details class="compare-card"><summary>Utilisateurs<span>1 · 5 · 15</span></summary>
-              <div class="compare-rows"><div class="compare-row"><span>Nombre d’utilisateurs</span><span>1 · 5 · 15</span></div></div>
+            <details class="compare-card"><summary>Utilisateurs et volume</summary>
+              <div class="compare-rows">
+                <div class="compare-row"><span>Utilisateurs</span><span>1 · 1 · 5 · 15</span></div>
+                <div class="compare-row"><span>Clients actifs</span><span>20 · ∞ · ∞ · ∞</span></div>
+              </div>
             </details>
             <details class="compare-card"><summary>Suivi commercial</summary>
               <div class="compare-rows">
-                <div class="compare-row"><span>Pipeline commercial</span><span>✓ · ✓ · ✓</span></div>
-                <div class="compare-row"><span>Automatisations</span><span>Non · ✓ · ✓</span></div>
-                <div class="compare-row"><span>Notifications collaboratives</span><span>Non · ✓ · ✓</span></div>
+                <div class="compare-row"><span>Pipeline et activités</span><span>✓ · ✓ · ✓ · ✓</span></div>
+                <div class="compare-row"><span>Automatisations</span><span>Non · Non · ✓ · ✓</span></div>
               </div>
             </details>
-            <details class="compare-card"><summary>Devis &amp; factures</summary>
+            <details class="compare-card"><summary>Devis et factures</summary>
               <div class="compare-rows">
-                <div class="compare-row"><span>Devis illimités</span><span>✓ · ✓ · ✓</span></div>
-                <div class="compare-row"><span>Modèles personnalisables</span><span>Non · ✓ · ✓</span></div>
-                <div class="compare-row"><span>Acompte / situation / solde</span><span>Non · ✓ · ✓</span></div>
+                <div class="compare-row"><span>Devis / mois</span><span>5 · ∞ · ∞ · ∞</span></div>
+                <div class="compare-row"><span>Factures / mois</span><span>5 · ∞ · ∞ · ∞</span></div>
+                <div class="compare-row"><span>Acomptes et soldes</span><span>Non · ✓ · ✓ · ✓</span></div>
+                <div class="compare-row"><span>Récurrence</span><span>Non · Non · ✓ · ✓</span></div>
               </div>
             </details>
-            <details class="compare-card"><summary>Achats &amp; stock</summary>
+            <details class="compare-card"><summary>Achats et pilotage</summary>
               <div class="compare-rows">
-                <div class="compare-row"><span>Fournisseurs et commandes</span><span>Non · ✓ · ✓</span></div>
-                <div class="compare-row"><span>Gestion de stock</span><span>Non · ✓ · ✓</span></div>
-                <div class="compare-row"><span>Plusieurs entrepôts</span><span>Non · Non · ✓</span></div>
+                <div class="compare-row"><span>Fournisseurs et commandes</span><span>Non · Non · ✓ · ✓</span></div>
+                <div class="compare-row"><span>Tableau de bord</span><span>Base · Base · Avancé · Avancé</span></div>
+                <div class="compare-row"><span>Rapports de marge</span><span>Non · Non · ✓ · ✓</span></div>
               </div>
             </details>
-            <details class="compare-card"><summary>Rapports &amp; permissions</summary>
+            <details class="compare-card"><summary>Équipe et support</summary>
               <div class="compare-rows">
-                <div class="compare-row"><span>Tableau de bord</span><span>Essentiel · Avancé · Avancé</span></div>
-                <div class="compare-row"><span>Rapports de marge</span><span>Non · ✓ · ✓</span></div>
-                <div class="compare-row"><span>Rôles et permissions</span><span>Non · Non · Avancés</span></div>
-              </div>
-            </details>
-            <details class="compare-card"><summary>Support</summary>
-              <div class="compare-rows">
-                <div class="compare-row"><span>Niveau de support</span><span>E-mail · Prioritaire · Renforcé</span></div>
-                <div class="compare-row"><span>Accompagnement déploiement</span><span>Non · Non · ✓</span></div>
+                <div class="compare-row"><span>Rôles</span><span>Non · Non · Prédéfinis · Personnalisés</span></div>
+                <div class="compare-row"><span>Support</span><span>Docs · E-mail · Prioritaire · Renforcé</span></div>
+                <div class="compare-row"><span>Déploiement</span><span>Non · Non · Non · ✓</span></div>
               </div>
             </details>
           </div>
@@ -634,11 +629,11 @@
       <div class="faq-list">
         <details class="faq-item">
           <summary>Piloz est-il un ERP ?</summary>
-          <p class="faq-a">Piloz est un ERP simplifié, pensé pour la gestion commerciale des indépendants, artisans et TPE : suivi commercial, devis, factures, paiements, achats et stock. Il ne couvre pas l’ensemble des modules d’un ERP traditionnel (comptabilité complète, paie, production) mais répond aux besoins essentiels de gestion commerciale d’une petite structure.</p>
+          <p class="faq-a">Piloz est un logiciel de gestion commerciale pensé pour les indépendants, artisans et TPE : suivi commercial, devis, factures, paiements et achats. Il ne remplace pas une comptabilité complète, un logiciel de paie ou un outil de production.</p>
         </details>
         <details class="faq-item">
-          <summary>Combien de temps dure l’essai ?</summary>
-          <p class="faq-a">L’essai gratuit dure 14 jours, sans engagement, avec accès à l’ensemble des fonctionnalités de l’offre choisie.</p>
+          <summary>Existe-t-il une offre gratuite ?</summary>
+          <p class="faq-a">Oui. L’offre Découverte est gratuite et sans carte bancaire. Elle comprend 1 utilisateur, jusqu’à 20 clients et prospects actifs, 5 devis numérotés et 5 factures finalisées par mois. L’accès est proposé sur demande pendant le lancement.</p>
         </details>
         <details class="faq-item">
           <summary>Dois-je installer Piloz ?</summary>
@@ -657,8 +652,8 @@
           <p class="faq-a">Oui, Piloz distingue les factures à venir, en retard, partiellement encaissées et encaissées.</p>
         </details>
         <details class="faq-item">
-          <summary>Piloz gère-t-il les achats et le stock ?</summary>
-          <p class="faq-a">Oui à partir de l’offre Pro : fournisseurs, commandes fournisseurs, réceptions et suivi de stock.</p>
+          <summary>Piloz gère-t-il les achats ?</summary>
+          <p class="faq-a">Oui à partir de l’offre Pro : fournisseurs, achats et commandes fournisseurs sont réunis dans le même espace que le suivi commercial.</p>
         </details>
         <details class="faq-item">
           <summary>Puis-je ajouter plusieurs utilisateurs ?</summary>
@@ -689,12 +684,12 @@
     <div class="container">
       <div class="cta-band reveal">
         <h2>Votre activité commerciale mérite mieux qu’un empilement de fichiers</h2>
-        <p>Centralisez vos prospects, vos devis, vos factures, vos paiements, vos achats et votre stock dans Piloz.</p>
+        <p>Centralisez vos prospects, vos devis, vos factures, vos paiements, vos relances et vos achats dans Piloz.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#tarifs">Choisir mon offre</a>
           <a class="btn btn-outline-light" href="https://calendly.com/erp-piloz/30min" target="_blank" rel="noopener">Réserver un appel</a>
         </div>
-        <span class="hero-meta">14 jours d’essai gratuit · Sans engagement</span>
+        <span class="hero-meta">Offre Découverte gratuite · Sans carte bancaire</span>
       </div>
     </div>
   </section>
@@ -713,7 +708,7 @@
         <a href="#fonctionnalites">Fonctionnalités</a>
         <a href="#tarifs">Tarifs</a>
         <a href="https://app.piloz.fr/?mode=login">Connexion</a>
-        <a href="#tarifs">Essai gratuit</a>
+        <a href="#tarifs">Offre gratuite</a>
       </div>
       <div class="footer-col">
         <h4>Solutions</h4>
@@ -742,6 +737,6 @@
   </div>
 </footer>
 
-<script type="module" src="assets/js/main.js?v=20260726.4"></script>
+<script type="module" src="assets/js/main.js?v=20260806.1"></script>
 </body>
 </html>

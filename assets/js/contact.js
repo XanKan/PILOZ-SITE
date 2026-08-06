@@ -1,4 +1,4 @@
-import { LINKS } from './config.js?v=20260726.1';
+import { LINKS } from './config.js?v=20260806.1';
 
 // Le formulaire public est transmis à la fonction Supabase Piloz. La clé du
 // fournisseur e-mail et l'adresse destinataire restent uniquement côté serveur.
@@ -9,6 +9,11 @@ export function initContactForm() {
   const status = document.getElementById('contact-status');
   const success = document.getElementById('contact-success');
   const submitBtn = form.querySelector('button[type="submit"]');
+  const message = form.querySelector('[name="message"]');
+
+  if (new URLSearchParams(window.location.search).get('offer') === 'discovery' && message && !message.value) {
+    message.value = 'Bonjour, je souhaite demander un accès gratuit à l’offre Découverte de Piloz.';
+  }
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();

@@ -2,17 +2,22 @@
 import { PLANS, signupForPlan } from './config.js';
 
 function planCardHTML(plan, period) {
-  const price = period === 'yearly' ? plan.yearly : plan.monthly;
-  const unit = period === 'yearly' ? '€ HT / an' : '€ HT / mois';
-  const sub =
-    period === 'yearly'
+  const isFree = plan.free === true;
+  const price = isFree ? 0 : period === 'yearly' ? plan.yearly : plan.monthly;
+  const unit = isFree ? '€ HT' : period === 'yearly' ? '€ HT / an' : '€ HT / mois';
+  const sub = isFree
+    ? plan.priceNote
+    : period === 'yearly'
       ? `Soit ${plan.yearlySaving} € économisés par an vs. mensuel`
       : `ou ${plan.yearly} € HT / an`;
 
   const inheritLi = plan.inherit ? `<li class="is-inherit">Tout ${plan.inherit}, plus :</li>` : '';
   const featuresLi = plan.features.map((f) => `<li>${f}</li>`).join('');
   const billing = period === 'yearly' ? 'annual' : 'monthly';
-  const signupLink = signupForPlan(plan.id, billing);
+  const signupLink = isFree ? plan.link : signupForPlan(plan.id, billing);
+  const actionData = isFree
+    ? 'data-plan-contact="discovery"'
+    : `data-plan-signup="${plan.id}" data-billing="${billing}"`;
 
   return `
     <div class="plan-card${plan.featured ? ' is-featured' : ''}" data-plan="${plan.id}">
@@ -22,7 +27,7 @@ function planCardHTML(plan, period) {
       <div class="plan-price"><strong>${price}</strong><span>${unit}</span></div>
       <p class="plan-price-sub">${sub}</p>
       <ul class="plan-features">${inheritLi}${featuresLi}</ul>
-      <a class="btn ${plan.featured ? 'btn-primary' : 'btn-outline'} btn-block" href="${signupLink}" data-plan-signup="${plan.id}" data-billing="${billing}">${plan.cta}</a>
+      <a class="btn ${plan.featured ? 'btn-primary' : 'btn-outline'} btn-block" href="${signupLink}" ${actionData}>${plan.cta}</a>
     </div>
   `;
 }
@@ -34,8 +39,8 @@ function renderPlans(period) {
   document.querySelectorAll('[data-plan-price]').forEach((el) => {
     const plan = PLANS.find((p) => p.id === el.dataset.planPrice);
     if (!plan) return;
-    const price = period === 'yearly' ? plan.yearly : plan.monthly;
-    const unit = period === 'yearly' ? '€ HT/an' : '€ HT/mois';
+    const price = plan.free ? 0 : period === 'yearly' ? plan.yearly : plan.monthly;
+    const unit = plan.free ? '€ HT' : period === 'yearly' ? '€ HT/an' : '€ HT/mois';
     el.textContent = `${price} ${unit}`;
   });
 
@@ -43,7 +48,7 @@ function renderPlans(period) {
   if (saveEl) {
     saveEl.textContent =
       period === 'yearly'
-        ? 'Avec l’engagement annuel, vous économisez jusqu’à 198 € par an selon votre offre.'
+        ? 'Avec l’engagement annuel, vous économisez jusqu’à 238 € par an selon votre offre.'
         : '';
   }
 }

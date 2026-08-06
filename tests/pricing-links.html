@@ -4,14 +4,22 @@
 import { initPricing } from '../assets/js/pricing.js';
 const checks=[];try{
  initPricing();
+ const cards=[...document.querySelectorAll('[data-plan]')];
+ const discovery=document.querySelector('[data-plan-contact="discovery"]');
  const monthly=[...document.querySelectorAll('[data-plan-signup]')];
- checks.push(['trois offres mensuelles',monthly.length===3&&monthly.every(link=>new URL(link.href).searchParams.get('billing')==='monthly')]);
+ checks.push(['quatre offres affichées',cards.map(card=>card.dataset.plan).join(',')==='discovery,essential,pro,business']);
+ checks.push(['offre Découverte gratuite',cards[0]?.textContent.includes('0')&&cards[0]?.textContent.includes('5 devis numérotés par mois')]);
+ checks.push(['accès Découverte sans checkout',discovery&&new URL(discovery.href).pathname==='/contact.html'&&new URL(discovery.href).searchParams.get('offer')==='discovery']);
+ checks.push(['trois offres payantes mensuelles',monthly.length===3&&monthly.every(link=>new URL(link.href).searchParams.get('billing')==='monthly')]);
  checks.push(['offres transmises',monthly.map(link=>new URL(link.href).searchParams.get('plan')).join(',')==='essential,pro,business']);
  checks.push(['paiement avant inscription',monthly.every(link=>new URL(link.href).pathname==='/checkout.html')]);
+ checks.push(['prix Business mensuel',document.querySelector('[data-plan="business"]')?.textContent.includes('119')]);
  document.querySelector('[data-period="yearly"]').click();
  const annual=[...document.querySelectorAll('[data-plan-signup]')];
- checks.push(['trois offres annuelles',annual.length===3&&annual.every(link=>new URL(link.href).searchParams.get('billing')==='annual')]);
+ checks.push(['trois offres payantes annuelles',annual.length===3&&annual.every(link=>new URL(link.href).searchParams.get('billing')==='annual')]);
  checks.push(['destination sécurisée',annual.every(link=>new URL(link.href).origin==='https://piloz.fr')]);
+ checks.push(['prix Business annuel',document.querySelector('[data-plan="business"]')?.textContent.includes('1190')]);
+ checks.push(['économie annuelle maximale',document.getElementById('pricing-save').textContent.includes('238')]);
 }catch(error){checks.push(['exécution',false,error.message]);}
 const failed=checks.filter(row=>!row[1]),result=document.getElementById('result');result.dataset.status=failed.length?'failed':'passed';result.textContent=failed.length?`Échec : ${failed.map(row=>row[0]).join(', ')}`:`${checks.length}/${checks.length} contrôles tarifs réussis`;
 </script></body></html>
